@@ -789,88 +789,63 @@
 <p>Before starting statistical mechanics, we review quantum mechanics. Thermodynamics will average quantum mechanical properties over a large number of atoms and provide mathematical relationships between QM and measurable properties.</p>
 <h3 id="postulates-of-qm">Postulates of QM</h3>
 <ol>
-<li><strong>State Function:</strong> The state of a system is described by a wavefunction <span class="arithmatex">\(\Psi(\vec{r},t)\)</span> that depends on position and time.</li>
-<li><strong>Observables:</strong> To every classical observable, there corresponds a linear, Hermitian operator <span class="arithmatex">\(\hat{A}\)</span>. The expectation value obeys
-   $$
-   \int f^<em> (\hat{A} g) \, d\tau = \int g^</em> (\hat{A} f) \, d\tau
-   $$</li>
-<li><strong>Measurement:</strong> A measurement of <span class="arithmatex">\(\hat{A}\)</span> yields an eigenvalue <span class="arithmatex">\(a\)</span>:
-   $$
-   \hat{A} \Psi = a \Psi
-   $$</li>
-<li><strong>Expectation Value:</strong> If <span class="arithmatex">\(\Psi\)</span> is normalized,
-   $$
-   \langle \hat{A} \rangle = \int \Psi^<em> \hat{A} \Psi \, d\tau
-   $$
-   Example: position
-   $$
-   \langle \hat{x} \rangle = \int \Psi^</em> x \Psi \, d\tau
-   $$</li>
-<li><strong>Time Evolution:</strong> The wavefunction evolves according to the time-dependent Schrödinger equation:
-   $$
-   i \hbar \frac{\partial \Psi}{\partial t} = \hat{H} \Psi
-   $$</li>
+<li>
+<p><strong>State Function:</strong> The state of a system is described by a wavefunction <span class="arithmatex">\(\Psi(\vec{r},t)\)</span> that depends on position and time.</p>
+</li>
+<li>
+<p><strong>Observables:</strong> To every classical observable, there corresponds a linear, Hermitian operator <span class="arithmatex">\(\hat{A}\)</span>. The expectation value obeys
+<span class="arithmatex">\(\int f^* (\hat{A} g) \, d\tau = \int g^* (\hat{A} f) \, d\tau\)</span></p>
+</li>
+<li>
+<p><strong>Measurement:</strong> A measurement of <span class="arithmatex">\(\hat{A}\)</span> yields an eigenvalue <span class="arithmatex">\(a\)</span>:<span class="arithmatex">\(\hat{A} \Psi = a \Psi\)</span></p>
+</li>
+<li>
+<p><strong>Expectation Value:</strong> If <span class="arithmatex">\(\Psi\)</span> is normalized,
+<span class="arithmatex">\(\langle \hat{A} \rangle = \int \Psi^* \hat{A} \Psi \, d\tau\)</span></p>
+</li>
+</ol>
+<p>Example: position <span class="arithmatex">\(\langle \hat{x} \rangle = \int \Psi^* x \Psi \, d\tau\)</span></p>
+<ol>
+<li><strong>Time Evolution:</strong> The wavefunction evolves according to the time-dependent Schrödinger equation: <span class="arithmatex">\(i \hbar \frac{\partial \Psi}{\partial t} = \hat{H} \Psi\)</span></li>
 </ol>
 <hr />
 <h3 id="working-with-the-hamiltonian-operator">Working with the Hamiltonian Operator</h3>
 <p>The one-dimensional Hamiltonian:</p>
-<div class="arithmatex">\[
-\hat{H}(x) = -\frac{\hbar^2}{2m} \frac{d^2}{dx^2} + V(x)
-\]</div>
+<div class="arithmatex">\[\hat{H}(x) = -\frac{\hbar^2}{2m} \frac{d^2}{dx^2} + V(x)\]</div>
 <p>where the first term is the kinetic energy operator and the second is the potential energy operator.</p>
 <p>We assume <strong>separation of variables</strong>:</p>
-<div class="arithmatex">\[
-\Psi(x,t) = \psi(x) f(t)
-\]</div>
+<div class="arithmatex">\[\Psi(x,t) = \psi(x) f(t)\]</div>
 <p>Plugging into the time-dependent Schrödinger equation:</p>
-<div class="arithmatex">\[
-i \hbar \frac{d}{dt} [f(t) \psi(x)] = \hat{H} [f(t) \psi(x)]
-\]</div>
+<div class="arithmatex">\[i \hbar \frac{d}{dt} [f(t) \psi(x)] = \hat{H} [f(t) \psi(x)]\]</div>
 <p>Recognizing that <span class="arithmatex">\(f(t)\)</span> has no spatial dependence and <span class="arithmatex">\(\psi(x)\)</span> has no time dependence:</p>
-<div class="arithmatex">\[
-i \hbar \frac{df}{dt} \psi(x) = f(t) \hat{H} \psi(x)
-\]</div>
+<div class="arithmatex">\[i \hbar \frac{df}{dt} \psi(x) = f(t) \hat{H} \psi(x)\]</div>
 <p>Divide both sides by <span class="arithmatex">\(f(t)\psi(x)\)</span>:</p>
-<div class="arithmatex">\[
-\frac{i \hbar}{f(t)} \frac{df}{dt} = \frac{\hat{H} \psi}{\psi} = E
-\]</div>
+<div class="arithmatex">\[\frac{i \hbar}{f(t)} \frac{df}{dt} = \frac{\hat{H} \psi}{\psi} = E\]</div>
 <p>where <span class="arithmatex">\(E\)</span> is a separation constant (the total energy). This yields <strong>two separate equations</strong>:</p>
 <ol>
 <li><strong>Time-Dependent Equation:</strong></li>
 </ol>
-<div class="arithmatex">\[
-i \hbar \frac{df}{dt} = E f(t) \quad \implies \quad f(t) = A e^{-i E t / \hbar}
-\]</div>
+<div class="arithmatex">\[i \hbar \frac{df}{dt} = E f(t) \quad \implies \quad f(t) = A e^{-i E t / \hbar}\]</div>
 <ol>
 <li><strong>Time-Independent Schrödinger Equation:</strong></li>
 </ol>
-<div class="arithmatex">\[
-\hat{H} \psi(x) = E \psi(x)
-\]</div>
+<div class="arithmatex">\[\hat{H} \psi(x) = E \psi(x)\]</div>
 <p><strong>Full solution:</strong></p>
-<div class="arithmatex">\[
-\Psi(x,t) = \psi(x) e^{-i E t / \hbar}
-\]</div>
+<div class="arithmatex">\[\Psi(x,t) = \psi(x) e^{-i E t / \hbar}\]</div>
 <hr />
 <h3 id="born-interpretation-of-the-wavefunction">Born Interpretation of the Wavefunction</h3>
 <ul>
 <li><span class="arithmatex">\(|\psi(x)|^2\)</span> is the <strong>probability density</strong>, giving the probability of finding a particle between <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(x + dx\)</span>:</li>
 </ul>
-<div class="arithmatex">\[
-P(x) dx = |\psi(x)|^2 dx
-\]</div>
+<div class="arithmatex">\[P(x) dx = |\psi(x)|^2 dx\]</div>
 <ul>
 <li><strong>Stationary States:</strong> The probability density is time-independent:</li>
 </ul>
-<div class="arithmatex">\[
-|\Psi(x,t)|^2 = |\psi(x)|^2
-\]</div>
+<div class="arithmatex">\[|\Psi(x,t)|^2 = |\psi(x)|^2\]</div>
 <ul>
 <li><strong>Time-Dependent Solutions (general):</strong></li>
 </ul>
-<div class="arithmatex">\[
-\Psi(x,t) = \hat{T} \exp\left(-\frac{i}{\hbar} \int_0^t \hat{H}(\vec{r},t') dt' \right) \Psi(0)
-\]</div>
+<div class="arithmatex">\[\Psi(x,t) = \hat{T} \exp\left(-\frac{i}{\hbar} \int_0^t \hat{H}(\vec{r},t') dt' \right) \Psi(0)\]</div>
 <hr />
 <h2 id="dirac-notation">Dirac Notation</h2>
 <ul>
@@ -878,29 +853,21 @@ P(x) dx = |\psi(x)|^2 dx
 <li><strong>Ket:</strong> <span class="arithmatex">\(|\psi\rangle = \psi\)</span></li>
 <li><strong>Matrix Element:</strong></li>
 </ul>
-<div class="arithmatex">\[
-\langle \psi_i | \hat{A} | \psi_j \rangle = \int \psi_i^* \hat{A} \psi_j \, d\tau
-\]</div>
+<div class="arithmatex">\[\langle \psi_i | \hat{A} | \psi_j \rangle = \int \psi_i^* \hat{A} \psi_j \, d\tau\]</div>
 <ul>
 <li><strong>Kronecker Delta:</strong></li>
 </ul>
-<div class="arithmatex">\[
-\langle i | j \rangle = \delta_{ij} = 
+<div class="arithmatex">\[\langle i | j \rangle = \delta_{ij} = 
 \begin{cases}
 1 &amp; i = j \\
 0 &amp; i \neq j
-\end{cases}
-\]</div>
+\end{cases}\]</div>
 <p>Wavefunctions must be continuous, single-valued, and have continuous first derivatives. They must be <strong>quadratically integrable</strong> (<span class="arithmatex">\(\langle \psi | \psi \rangle\)</span> exists), except in the case of unbounded free particles.</p>
 <hr />
 <h3 id="example-permutation-operator-hatp_ij">Example: Permutation Operator <span class="arithmatex">\(\hat{P}_{ij}\)</span></h3>
-<div class="arithmatex">\[
-\hat{P}_{ij}^2 = 1, \quad \hat{P}_{12} f = c f
-\]</div>
+<div class="arithmatex">\[\hat{P}_{ij}^2 = 1, \quad \hat{P}_{12} f = c f\]</div>
 <p>Applying the operator twice:</p>
-<div class="arithmatex">\[
-\hat{P}_{12} \hat{P}_{12} f = \hat{P}_{12} (c f) = c^2 f = f \implies c = \pm 1
-\]</div>
+<div class="arithmatex">\[\hat{P}_{12} \hat{P}_{12} f = \hat{P}_{12} (c f) = c^2 f = f \implies c = \pm 1\]</div>
 <hr />
 <h3 id="pauli-principle">Pauli Principle</h3>
 <ul>
