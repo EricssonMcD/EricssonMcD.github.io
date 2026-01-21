@@ -60,7 +60,7 @@ $$
 Taking the Fourier transform:
 
 $$
-\int_{-\infty}^{\infty} \vec{\nabla} \   imes \vec{E}(\vec{r},t) e^{-i \omega t} dt = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt 
+\int_{-\infty}^{\infty} \vec{\nabla} \times \vec{E}(\vec{r},t) e^{-i \omega t} dt = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt 
 $$
 
 Bringing the curl operator outside the integral:
