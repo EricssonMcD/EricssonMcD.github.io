@@ -1,5 +1,5 @@
 ---
-title: "Lecture Notes"
+title: "Note Template"
 date: YYYY-MM-DD
 ---
 

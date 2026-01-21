@@ -5,7 +5,8 @@
 
 ## Lectures
 ### Geometrical Optics
-- [Lecture 1:](Opt_01_20_26.md)
+- [Lecture 1](Lectures/Opt_01_20_26.md)
 
 ## Homework Assignments
-- [HW1](Optics_HW1.md)
+- [HW1](Homework/Optics_HW1.md)
+- [HW2](Homework/Optics_HW2.md)
