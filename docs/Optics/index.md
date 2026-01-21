@@ -8,5 +8,4 @@
 - [Lecture 1:](Opt_01_20_26.md)
 
 ## Homework Assignments
-
 - [HW1](Optics_HW1.md)

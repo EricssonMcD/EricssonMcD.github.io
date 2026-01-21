@@ -423,6 +423,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gauss-law-for-electricity-in-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gauss' Law for Electricity in matter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gauss-law-for-magnetism-in-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gauss' Law for Magnetism in matter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faradays-law-in-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Faraday's Law in matter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ampere-maxwell-law-in-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ampere-Maxwell Law in matter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -586,6 +636,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gauss-law-for-electricity-in-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gauss' Law for Electricity in matter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gauss-law-for-magnetism-in-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gauss' Law for Magnetism in matter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#faradays-law-in-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Faraday's Law in matter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ampere-maxwell-law-in-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ampere-Maxwell Law in matter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -607,19 +707,104 @@
 
 <h1 id="homework-1">Homework 1:</h1>
 <p>Staring with Maxwell's equations in matter and in the time-domain, Fourier transform these equations and rewrite them in the frequency domain.</p>
-<h3 id="solution">Solution</h3>
-<p>The fourier transform is defined as:
-$$ \tilde{F}[f(t)] = F(\omega) = \int_{-\infty}^{\infty} f(t) e^{-i \omega t} dt$$</p>
+<h2 id="solution">Solution</h2>
+<p>The fourier transform is defined as:</p>
+<div class="arithmatex">\[ \tilde{F}[f(t)] = F(\omega) = \int_{-\infty}^{\infty} f(t) e^{-i \omega t} dt\]</div>
 <hr />
-<p>Gauss' Law in matter:
-$$ \vec{\nabla} \cdot \vec{D}(\vec{r},t) = \rho_{f}(\vec{r},t) $$
-Taking the Fourier transform:
-$$ \int_{-\infty}^{\infty} \vec{\nabla} \cdot \vec{D}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \rho_{f}(\vec{r},t) e^{-i \omega t} dt $$
-Bringing the divergence operator outside the integral (as it only acts on spatial coordinates):
-$$ \vec{\nabla} \cdot \int_{-\infty}^{\infty} \vec{D}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \rho_{f}(\vec{r},t) e^{-i \omega t} dt $$
-Recognizing the Fourier transforms:
-$$ \vec{\nabla} \cdot \tilde{D}(\vec{r},\omega) = \tilde{\rho}_{f}(\vec{r},\omega) $$</p>
+<h3 id="gauss-law-for-electricity-in-matter">Gauss' Law for Electricity in matter:</h3>
+<div class="arithmatex">\[\vec{\nabla} \cdot \vec{D}(\vec{r},t) = \rho_{f}(\vec{r},t)\]</div>
+<p>Taking the Fourier transform:</p>
+<div class="arithmatex">\[ \int_{-\infty}^{\infty} \vec{\nabla} \cdot \vec{D}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \rho_{f}(\vec{r},t) e^{-i \omega t} dt \]</div>
+<p>Bringing the divergence operator outside the integral (as it only acts on spatial coordinates):</p>
+<div class="arithmatex">\[ \vec{\nabla} \cdot \int_{-\infty}^{\infty} \vec{D}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \rho_{f}(\vec{r},t) e^{-i \omega t} dt \]</div>
+<p>Recognizing the Fourier transforms:</p>
+<div class="arithmatex">\[\vec{\nabla} \cdot \tilde{D}(\vec{r},\omega) = \tilde{\rho}_{f}(\vec{r},\omega)\]</div>
 <hr />
+<h3 id="gauss-law-for-magnetism-in-matter">Gauss' Law for Magnetism in matter:</h3>
+<div class="arithmatex">\[
+\vec{\nabla} \cdot \vec{B}(\vec{r},t) = 0
+\]</div>
+<p>Taking the Fourier transform:</p>
+<div class="arithmatex">\[\int_{-\infty}^{\infty} \vec{\nabla} \cdot \vec{B}(\vec{r},t) e^{-i \omega t} dt = 0 \]</div>
+<p>Bringing the divergence operator outside the integral:</p>
+<div class="arithmatex">\[ 
+\vec{\nabla} \cdot \int_{-\infty}^{\infty} \vec{B}(\vec{r},t) e^{-i \omega t} dt = 0 \]</div>
+<p>Recognizing the Fourier transform:</p>
+<div class="arithmatex">\[
+\vec{\nabla} \cdot \tilde{B}(\vec{r},\omega) = 0
+\]</div>
+<hr />
+<h3 id="faradays-law-in-matter">Faraday's Law in matter:</h3>
+<div class="arithmatex">\[
+\vec{\nabla} \times \vec{E}(\vec{r},t) = - \frac{\partial \vec{B}(\vec{r},t)}{\partial t}
+\]</div>
+<p>Taking the Fourier transform:</p>
+<div class="arithmatex">\[
+\int_{-\infty}^{\infty} \vec{\nabla} \   imes \vec{E}(\vec{r},t) e^{-i \omega t} dt = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt 
+\]</div>
+<p>Bringing the curl operator outside the integral:</p>
+<div class="arithmatex">\[ 
+\vec{\nabla} \times \int_{-\infty}^{\infty} \vec{E}(\vec{r},t) e^{-i \omega t} dt = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
+\]</div>
+<p>Recognizing the Fourier transform on the left side:</p>
+<div class="arithmatex">\[ \vec{\nabla} \times \tilde{E}(\vec{r},\omega) = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt \]</div>
+<p>Using integration by parts on the right side:</p>
+<div class="arithmatex">\[
+u = e^{-i \omega t} \quad dv = \frac{\partial \vec{B}(\vec{r},t)}{\partial t} dt
+\]</div>
+<div class="arithmatex">\[
+du = -i \omega e^{-i \omega t} dt \quad v = \vec{B}(\vec{r},t)
+\]</div>
+<div class="arithmatex">\[
+\int u \, dv = uv - \int v \, du
+\]</div>
+<div class="arithmatex">\[
+\int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = \left[ \vec{B}(\vec{r},t) e^{-i \omega t} \right]_{-\infty}^{\infty} + i \omega \int_{-\infty}^{\infty} \vec{B}(\vec{r},t) e^{-i \omega t} dt
+\]</div>
+<p>Assuming the fields vanish at infinity, the boundary term is zero:</p>
+<div class="arithmatex">\[
+\int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = i \omega \tilde{B}(\vec{r},\omega)
+\]</div>
+<p>Resulting in:</p>
+<div class="arithmatex">\[\vec{\nabla} \times \tilde{E}(\vec{r},\omega) = - i \omega \tilde{B}(\vec{r},\omega)\]</div>
+<hr />
+<h3 id="ampere-maxwell-law-in-matter">Ampere-Maxwell Law in matter:</h3>
+<div class="arithmatex">\[
+\vec{\nabla} \times \vec{H}(\vec{r},t) = \vec{J}_{f}(\vec{r},t) + \frac{\partial \vec{D}(\vec{r},t)}{\partial t}
+\]</div>
+<p>Taking the Fourier transform:</p>
+<div class="arithmatex">\[
+\int_{-\infty}^{\infty} \vec{\nabla} \times \vec{H}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \vec{J}_{f}(\vec{r},t) e^{-i \omega t} dt + \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
+\]</div>
+<p>Bringing the curl operator outside the integral:</p>
+<div class="arithmatex">\[
+\vec{\nabla} \times \int_{-\infty}^{\infty} \vec{H}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \vec{J}_{f}(\vec{r},t) e^{-i \omega t} dt + \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
+\]</div>
+<p>Recognizing the Fourier transforms on the left side and the first term on the right side:</p>
+<div class="arithmatex">\[
+\vec{\nabla} \times \tilde{H}(\vec{r},\omega) = \tilde{J}_{f}(\vec{r},\omega) + \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
+\]</div>
+<p>Using integration by parts on the last term:</p>
+<div class="arithmatex">\[
+u = e^{-i \omega t} \quad dv = \frac{\partial \vec{D}(\vec{r},t)}{\partial t} dt 
+\]</div>
+<div class="arithmatex">\[ 
+du = -i \omega e^{-i \omega t} dt \quad v = \vec{D}(\vec{r},t)
+\]</div>
+<div class="arithmatex">\[ 
+\int u \, dv = uv - \int v \, du 
+\]</div>
+<div class="arithmatex">\[
+\int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = \left[ \vec{D}(\vec{r},t) e^{-i \omega t} \right]_{-\infty}^{\infty} + i \omega \int_{-\infty}^{\infty} \vec{D}(\vec{r},t) e^{-i \omega t} dt
+\]</div>
+<p>Assuming the fields vanish at infinity, the boundary term is zero:</p>
+<div class="arithmatex">\[
+\int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = i \omega \tilde{D}(\vec{r},\omega)
+\]</div>
+<p>Resulting in:</p>
+<div class="arithmatex">\[ 
+\vec{\nabla} \times \tilde{H}(\vec{r},\omega) = \tilde{J}_{f}(\vec{r},\omega) + i \omega \tilde{D}(\vec{r},\omega) 
+\]</div>
 
 
 
