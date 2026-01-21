@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../01_20_26/">
+        <link rel="prev" href="../Opt_01_20_26/">
       
       
         <link rel="next" href="../../StatMech/">
@@ -23,7 +23,7 @@
     
     
       
-        <title>Homework 1: - Notes on Classes</title>
+        <title>Homework 1: - Online Notebook</title>
       
     
     
@@ -80,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Notes on Classes" class="md-header__button md-logo" aria-label="Notes on Classes" data-md-component="logo">
+    <a href="../.." title="Online Notebook" class="md-header__button md-logo" aria-label="Online Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -94,7 +94,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Notes on Classes
+            Online Notebook
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -178,13 +178,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Notes on Classes" class="md-nav__button md-logo" aria-label="Notes on Classes" data-md-component="logo">
+    <a href="../.." title="Online Notebook" class="md-nav__button md-logo" aria-label="Online Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Notes on Classes
+    Online Notebook
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -203,7 +203,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Welcome to my Online Notebook.
   
 
     
@@ -327,14 +327,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_20_26/" class="md-nav__link">
+      <a href="../Opt_01_20_26/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    01 20 26
+    Opt 01 20 26
   
 
     
@@ -523,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../StatMech/01_20_26/" class="md-nav__link">
+      <a href="../../StatMech/Stat_01_20_26/" class="md-nav__link">
         
   
   
@@ -608,6 +608,18 @@
 <h1 id="homework-1">Homework 1:</h1>
 <p>Staring with Maxwell's equations in matter and in the time-domain, Fourier transform these equations and rewrite them in the frequency domain.</p>
 <h3 id="solution">Solution</h3>
+<p>The fourier transform is defined as:
+$$ \tilde{F}[f(t)] = F(\omega) = \int_{-\infty}^{\infty} f(t) e^{-i \omega t} dt$$</p>
+<hr />
+<p>Gauss' Law in matter:
+$$ \vec{\nabla} \cdot \vec{D}(\vec{r},t) = \rho_{f}(\vec{r},t) $$
+Taking the Fourier transform:
+$$ \int_{-\infty}^{\infty} \vec{\nabla} \cdot \vec{D}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \rho_{f}(\vec{r},t) e^{-i \omega t} dt $$
+Bringing the divergence operator outside the integral (as it only acts on spatial coordinates):
+$$ \vec{\nabla} \cdot \int_{-\infty}^{\infty} \vec{D}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \rho_{f}(\vec{r},t) e^{-i \omega t} dt $$
+Recognizing the Fourier transforms:
+$$ \vec{\nabla} \cdot \tilde{D}(\vec{r},\omega) = \tilde{\rho}_{f}(\vec{r},\omega) $$</p>
+<hr />
 
 
 
