@@ -24,7 +24,7 @@ Bringing the divergence operator outside the integral (as it only acts on spatia
 
 $$ \vec{\nabla} \cdot \int_{-\infty}^{\infty} \vec{D}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \rho_{f}(\vec{r},t) e^{-i \omega t} dt $$
 
-Recognizing the Fourier transforms:
+Simplifying the Fourier transforms:
 
 $$\vec{\nabla} \cdot \tilde{D}(\vec{r},\omega) = \tilde{\rho}_{f}(\vec{r},\omega)$$
 
@@ -44,7 +44,7 @@ Bringing the divergence operator outside the integral:
 $$ 
 \vec{\nabla} \cdot \int_{-\infty}^{\infty} \vec{B}(\vec{r},t) e^{-i \omega t} dt = 0 $$
 
-Recognizing the Fourier transform:
+Simplifying the Fourier transform:
 
 $$
 \vec{\nabla} \cdot \tilde{B}(\vec{r},\omega) = 0
@@ -63,13 +63,13 @@ $$
 \int_{-\infty}^{\infty} \vec{\nabla} \times \vec{E}(\vec{r},t) e^{-i \omega t} dt = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt 
 $$
 
-Bringing the curl operator outside the integral:
+Bringing the curl outside the integral:
 
 $$ 
 \vec{\nabla} \times \int_{-\infty}^{\infty} \vec{E}(\vec{r},t) e^{-i \omega t} dt = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
 $$
 
-Recognizing the Fourier transform on the left side:
+Simplifying the Fourier transform on the left side:
 
 $$ \vec{\nabla} \times \tilde{E}(\vec{r},\omega) = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt $$
 
@@ -91,7 +91,11 @@ $$
 \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = \left[ \vec{B}(\vec{r},t) e^{-i \omega t} \right]_{-\infty}^{\infty} + i \omega \int_{-\infty}^{\infty} \vec{B}(\vec{r},t) e^{-i \omega t} dt
 $$
 
-Assuming the fields vanish at infinity, the boundary term is zero:
+Assuming the special case where $\rho = 0$ and $\vec{J} = 0$ as we did in class lets us simplify the differential:
+
+$$
+-\frac{\partial \vec{B}}{\partial t} = \nabla \times \vec{E}
+$$
 
 $$
 \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = i \omega \tilde{B}(\vec{r},\omega)
@@ -120,7 +124,7 @@ $$
 \vec{\nabla} \times \int_{-\infty}^{\infty} \vec{H}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \vec{J}_{f}(\vec{r},t) e^{-i \omega t} dt + \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
 $$
 
-Recognizing the Fourier transforms on the left side and the first term on the right side:
+Simplifying the Fourier transforms on the left side and the first term on the right side:
 
 $$
 \vec{\nabla} \times \tilde{H}(\vec{r},\omega) = \tilde{J}_{f}(\vec{r},\omega) + \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
@@ -144,7 +148,11 @@ $$
 \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = \left[ \vec{D}(\vec{r},t) e^{-i \omega t} \right]_{-\infty}^{\infty} + i \omega \int_{-\infty}^{\infty} \vec{D}(\vec{r},t) e^{-i \omega t} dt
 $$
 
-Assuming the fields vanish at infinity, the boundary term is zero:
+Assuming our special case where $\rho = 0$ and $\vec{J} = 0$ lets us simplify the differential:
+
+$$
+-\frac{\partial \vec{D}}{\partial t} = \nabla \times \vec{H} - \vec{J}_{free}
+$$
 
 $$
 \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = i \omega \tilde{D}(\vec{r},\omega)
