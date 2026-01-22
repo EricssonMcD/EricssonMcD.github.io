@@ -747,6 +747,46 @@
 \nabla^2 \vec{E} + k^2 \vec{E} = 0
 \]</div>
 <h2 id="solution">Solution:</h2>
+<p>Beginning with Faradays Law in the frequency domain:</p>
+<div class="arithmatex">\[
+\nabla \times \tilde{E} = -i \omega \tilde{B}
+\]</div>
+<p>We can take the curl of both sides:</p>
+<div class="arithmatex">\[
+\nabla \times [\nabla \times \tilde{E}] = \nabla \times [-i \omega \tilde{B}]
+\]</div>
+<p>Working on the left hand side we can use the vector triple product to get:</p>
+<div class="arithmatex">\[
+\nabla(\nabla \cdot \tilde{E}) - \nabla^2 \tilde{E} = \nabla \times [-i \omega \tilde{B}]
+\]</div>
+<p>Using the same assumptions we made in class <span class="arithmatex">\(\rho = 0\)</span>  and <span class="arithmatex">\(\vec{J} = 0\)</span> allows us set  <span class="arithmatex">\(\nabla \cdot \tilde{E} = 0\)</span>  We can then see that the diivergence of 0 is 0 making the entire first term vanish leaving </p>
+<div class="arithmatex">\[
+-\nabla^2 \tilde{E} = \nabla \times [-i \omega \tilde{B}]
+\]</div>
+<p>i and <span class="arithmatex">\(\omega\)</span> can be brought out of the cross product and we are left with </p>
+<div class="arithmatex">\[-\nabla^2 \tilde{E} = i \omega[\nabla \times \tilde{B}]\]</div>
+<p>we know that</p>
+<div class="arithmatex">\[
+\nabla \times \vec{B} = \mu_0 \vec{J} + \mu_0 \epsilon_0 \vec{E}
+\]</div>
+<p>So inputting this results in </p>
+<div class="arithmatex">\[
+-\nabla^2 \tilde{E} = i \omega[\mu_0 \vec{J} + \mu_0 \epsilon_0 \vec{E}]
+\]</div>
+<p>With the assumptions made earlier, <span class="arithmatex">\(\vec{J} = 0\)</span> so that term vanishes leaving</p>
+<div class="arithmatex">\[
+-\nabla^2 \tilde{E} = i \omega[\ \mu_0 \epsilon_0 \vec{E}]
+\]</div>
+<p>We can subtract the right hand side from both sides of the equation and then multiply by -1 to reach:</p>
+<div class="arithmatex">\[
+\nabla^2 \tilde{E} + i \omega[\ \mu_0 \epsilon_0 \vec{E}] = 0
+\]</div>
+<p>Then, finally, to reach the desired form we set the constants in the second term equal to another constant, <span class="arithmatex">\(k^2\)</span> which means </p>
+<div class="arithmatex">\[ k = \sqrt{i \omega \mu_0 \epsilon_0}\]</div>
+<p>leaving us with the desired result. </p>
+<div class="arithmatex">\[
+\nabla^2 \tilde{E} + k^2 \tilde{E} = 0
+\]</div>
 
 
 
