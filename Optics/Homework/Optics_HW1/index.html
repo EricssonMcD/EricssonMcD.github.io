@@ -857,7 +857,7 @@
 <div class="arithmatex">\[ \int_{-\infty}^{\infty} \vec{\nabla} \cdot \vec{D}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \rho_{f}(\vec{r},t) e^{-i \omega t} dt \]</div>
 <p>Bringing the divergence operator outside the integral (as it only acts on spatial coordinates):</p>
 <div class="arithmatex">\[ \vec{\nabla} \cdot \int_{-\infty}^{\infty} \vec{D}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \rho_{f}(\vec{r},t) e^{-i \omega t} dt \]</div>
-<p>Recognizing the Fourier transforms:</p>
+<p>Simplifying the Fourier transforms:</p>
 <div class="arithmatex">\[\vec{\nabla} \cdot \tilde{D}(\vec{r},\omega) = \tilde{\rho}_{f}(\vec{r},\omega)\]</div>
 <hr />
 <h3 id="gauss-law-for-magnetism-in-matter">Gauss' Law for Magnetism in matter:</h3>
@@ -869,7 +869,7 @@
 <p>Bringing the divergence operator outside the integral:</p>
 <div class="arithmatex">\[ 
 \vec{\nabla} \cdot \int_{-\infty}^{\infty} \vec{B}(\vec{r},t) e^{-i \omega t} dt = 0 \]</div>
-<p>Recognizing the Fourier transform:</p>
+<p>Simplifying the Fourier transform:</p>
 <div class="arithmatex">\[
 \vec{\nabla} \cdot \tilde{B}(\vec{r},\omega) = 0
 \]</div>
@@ -880,13 +880,13 @@
 \]</div>
 <p>Taking the Fourier transform:</p>
 <div class="arithmatex">\[
-\int_{-\infty}^{\infty} \vec{\nabla} \   imes \vec{E}(\vec{r},t) e^{-i \omega t} dt = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt 
+\int_{-\infty}^{\infty} \vec{\nabla} \times \vec{E}(\vec{r},t) e^{-i \omega t} dt = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt 
 \]</div>
-<p>Bringing the curl operator outside the integral:</p>
+<p>Bringing the curl outside the integral:</p>
 <div class="arithmatex">\[ 
 \vec{\nabla} \times \int_{-\infty}^{\infty} \vec{E}(\vec{r},t) e^{-i \omega t} dt = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
 \]</div>
-<p>Recognizing the Fourier transform on the left side:</p>
+<p>Simplifying the Fourier transform on the left side:</p>
 <div class="arithmatex">\[ \vec{\nabla} \times \tilde{E}(\vec{r},\omega) = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt \]</div>
 <p>Using integration by parts on the right side:</p>
 <div class="arithmatex">\[
@@ -901,7 +901,10 @@ du = -i \omega e^{-i \omega t} dt \quad v = \vec{B}(\vec{r},t)
 <div class="arithmatex">\[
 \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = \left[ \vec{B}(\vec{r},t) e^{-i \omega t} \right]_{-\infty}^{\infty} + i \omega \int_{-\infty}^{\infty} \vec{B}(\vec{r},t) e^{-i \omega t} dt
 \]</div>
-<p>Assuming the fields vanish at infinity, the boundary term is zero:</p>
+<p>Assuming the special case where <span class="arithmatex">\(\rho = 0\)</span> and <span class="arithmatex">\(\vec{J} = 0\)</span> as we did in class lets us simplify the differential:</p>
+<div class="arithmatex">\[
+-\frac{\partial \vec{B}}{\partial t} = \nabla \times \vec{E}
+\]</div>
 <div class="arithmatex">\[
 \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = i \omega \tilde{B}(\vec{r},\omega)
 \]</div>
@@ -920,7 +923,7 @@ du = -i \omega e^{-i \omega t} dt \quad v = \vec{B}(\vec{r},t)
 <div class="arithmatex">\[
 \vec{\nabla} \times \int_{-\infty}^{\infty} \vec{H}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \vec{J}_{f}(\vec{r},t) e^{-i \omega t} dt + \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
 \]</div>
-<p>Recognizing the Fourier transforms on the left side and the first term on the right side:</p>
+<p>Simplifying the Fourier transforms on the left side and the first term on the right side:</p>
 <div class="arithmatex">\[
 \vec{\nabla} \times \tilde{H}(\vec{r},\omega) = \tilde{J}_{f}(\vec{r},\omega) + \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
 \]</div>
@@ -937,7 +940,10 @@ du = -i \omega e^{-i \omega t} dt \quad v = \vec{D}(\vec{r},t)
 <div class="arithmatex">\[
 \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = \left[ \vec{D}(\vec{r},t) e^{-i \omega t} \right]_{-\infty}^{\infty} + i \omega \int_{-\infty}^{\infty} \vec{D}(\vec{r},t) e^{-i \omega t} dt
 \]</div>
-<p>Assuming the fields vanish at infinity, the boundary term is zero:</p>
+<p>Assuming our special case where <span class="arithmatex">\(\rho = 0\)</span> and <span class="arithmatex">\(\vec{J} = 0\)</span> lets us simplify the differential:</p>
+<div class="arithmatex">\[
+-\frac{\partial \vec{D}}{\partial t} = \nabla \times \vec{H} - \vec{J}_{free}
+\]</div>
 <div class="arithmatex">\[
 \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = i \omega \tilde{D}(\vec{r},\omega)
 \]</div>
