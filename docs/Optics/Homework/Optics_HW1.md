@@ -1,4 +1,5 @@
 ---
+section: "Optics Homework"
 title: "Homework 1"
 ---
 # Homework 1:
@@ -148,11 +149,7 @@ $$
 \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = \left[ \vec{D}(\vec{r},t) e^{-i \omega t} \right]_{-\infty}^{\infty} + i \omega \int_{-\infty}^{\infty} \vec{D}(\vec{r},t) e^{-i \omega t} dt
 $$
 
-Assuming our special case where $\rho = 0$ and $\vec{J} = 0$ lets us simplify the differential:
-
-$$
--\frac{\partial \vec{D}}{\partial t} = \nabla \times \vec{H} - \vec{J}_{free}
-$$
+I have not taken enough physics to know if this is valid but from what I have read in literature it is a standard assumption to say $\vec{D}(\vec{r},t)$ goes to 0 and +/- $\infty$. This would cause the extra $[\vec{D}(\vec{r},t)\exp{[-i \omega t]}]$ term to go away leaving in integration resul:. 
 
 $$
 \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = i \omega \tilde{D}(\vec{r},\omega)
