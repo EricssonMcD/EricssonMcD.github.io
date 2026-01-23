@@ -1,6 +1,6 @@
 # Chem 5320 - Statistical Mechanics
 
-**Instructor:** Dr. Shuford
+**Instructor:** Dr. Shuford  
 **Term** Spring 2026
 
 ## Lectures

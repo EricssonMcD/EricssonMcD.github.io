@@ -1,6 +1,6 @@
 # PHYS 5381 Spectial Topics: Optics
 
-**Instructor:** Dr. Hilton
+**Instructor:** Dr. Hilton  
 **Term** Spring 2026
 
 ## Lectures

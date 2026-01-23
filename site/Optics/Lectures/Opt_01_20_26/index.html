@@ -12,7 +12,7 @@
         <link rel="prev" href="../../Homework/Optics_HW2/">
       
       
-        <link rel="next" href="../../../Statistical_Mechanics/">
+        <link rel="next" href="../Opt_01_22_26/">
       
       
         
@@ -595,6 +595,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Opt_01_22_26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -691,8 +719,138 @@
   
   
   
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Homework
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../Statistical_Mechanics/Stat_01_20_26/" class="md-nav__link">
+      <a href="../../../Statistical_Mechanics/homework/Statistical_Mechanics_HW1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lectures
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lectures
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Statistical_Mechanics/lectures/Stat_01_20_26/" class="md-nav__link">
         
   
   
@@ -708,6 +866,42 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Statistical_Mechanics/lectures/Stat_01_22_26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -855,8 +1049,12 @@ The measured displacement vector is:</p>
 <p>Since <span class="arithmatex">\(\nabla^2\)</span> acts only on spatial variables and <span class="arithmatex">\(d^2/dt^2\)</span> acts only on time:</p>
 <div class="arithmatex">\[T(t) \nabla^2 R(\vec{r}) = \mu_0 \epsilon_0 R(\vec{r}) \frac{d^2 T(t)}{dt^2}\]</div>
 <p>Divide both sides by <span class="arithmatex">\(R(\vec{r}) T(t)\)</span>:</p>
-<div class="arithmatex">\[\frac{\nabla^2 R(\vec{r})}{R(\vec{r})} = \mu_0 \epsilon_0 \frac{1}{T(t)} \frac{d^2 T(t)}{dt^2} = -k^2\]</div>
-<p>Time-dependent equation:</p>
+<div class="arithmatex">\[\frac{\nabla^2 R(\vec{r})}{R(\vec{r})} + \mu_0 \epsilon_0 \frac{1}{T(t)} \frac{d^2 T(t)}{dt^2} = 0\]</div>
+<p>We see that there is are both time and space dependent parts of our equation which must sum to 0 so they are equal and opposite and can be set to some constant, say <span class="arithmatex">\(-k^2\)</span>. </p>
+<div class="arithmatex">\[
+-\frac{\nabla^2 R(\vec{r})}{R(\vec{r})} = \mu_0 \epsilon_0 \frac{1}{T(t)} \frac{d^2 T(t)}{dt^2} = -k^2
+\]</div>
+<p>We will treat the spacially dependent portion later but for now we will be looking at the time dependent equation:</p>
 <div class="arithmatex">\[\frac{d^2 T(t)}{dt^2} + \frac{k^2}{\mu_0 \epsilon_0} T(t) = 0\]</div>
 <p>Letting <span class="arithmatex">\(c = 1/\sqrt{\mu_0 \epsilon_0}\)</span>, we have:</p>
 <div class="arithmatex">\[\frac{d^2 T(t)}{dt^2} + \omega^2 T(t) = 0, \quad \omega = \frac{k}{c}\]</div>

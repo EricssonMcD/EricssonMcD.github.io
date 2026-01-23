@@ -1,3 +1,8 @@
-# Welcome to my Online Notebook.
+---
+title: "Notebook Home"
+---
 
-I am currently taking the two classes that are the basis for this notebook so the content will expand as I learn. 
+# Current Courses
+
+- *[Phys 5381: Optics](Optics/index.md)*
+- *[Chem 5320: Thermodynamics and Statistical Thermodynamics](Statistical_Mechanics/index.md)*
