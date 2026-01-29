@@ -3,9 +3,11 @@ section: "Statistical Mechanics Homework"
 title: "Homework 1"
 ---
 
-# Problem 1
+## **Problem 1**
+
 Show that the eigenvalues of a Hermitian operator are real numbers [6 pts]
-## Solution
+
+<h2>Solution</h2>
 
 We can begin with the two eigenvalue equations:
 
@@ -35,10 +37,11 @@ $\langle \psi_i | \psi_i \rangle$ is a positive quantity meaning for the equalit
 
 ---
 
-# Problem 2
+## **Problem 2**
+
 Prove that wave functions corresponding to Different Eigenvalues of a Hermitian operator are orthogonal [6 pts]
 
-## Solution
+<h2>Solution</h2>
 Starting from the equation found in the last problem:
 
 $$\langle \psi_j | \hat{H} | \psi_i \rangle = \lambda_i \langle \psi_j | \psi_i \rangle = \lambda_j^*  \langle \psi_j |   \psi_i \rangle$$
@@ -59,10 +62,10 @@ Which is solved in two ways, either $\lambda_j = \lambda_i$ or $\langle \psi_j |
 
 --- 
 
-# Problem 3
+## **Problem 3**
 The infrared spectrum of $^{75}$Br$^{19}$F consists of an intense line at 380 cm$^{-1}$. Calculate the force constant, $k_f$, of $^{75}$Br$^{19}$F. [6 pts]
 
-## Solution
+<h2>Solution</h2>
 Because $^{75}$Br$^{19}$F is a diatomic molecule, we can use the harmonic oscillator approximation to solve the problem. We know that in the harmonic oscillator approximation,
 
 $$\hat{H} = -\frac{\hbar^2}{2 \mu} \frac{d^2}{dx^2} + \frac{1}{2} k_f x^2$$
@@ -98,11 +101,11 @@ $$k_f = \left( 2 \pi \cdot (2.99 \times 10^{10}\frac{~\text{cm}}{~\text{s}}) \cd
 
 ---
 
-# Problem 4
+## **Problem 4**
 
 A particle of mass $2.00 \times 10^{-26}$ g is in a one-dimensional box of length 4.00nm. Find the frequency and wavelength of the photon emitted when this particle goes from  the n = 3 level to the n = 2 level. [6 pts]
 
-## Solution
+<h2>Solution</h2>
 Particle in a box (PIB) has the hamiltonian and solution:
 
 $$\hat{H} = \frac{\hbar^2}{2m \frac{d}{dx}}$$
@@ -132,11 +135,11 @@ $$\lambda = \frac{c}{\nu} = \frac{2.99 \times 10^8 ~\text{m s}^{-1}}{1.30 \times
 
 ---
 
-# Problem 5
+## **Problem 5**
 
 Derive an expression for the number of translational states for a 3d ideal gas between $\epsilon$ and $\epsilon + \Delta \epsilon$. Approximately how many states are there in a 1\% band around $\epsilon$ (i.e. $\Delta \epsilon = 0.01\epsilon$) if you take $\epsilon = (3/2)kT$, T= 300K, m= 10E-25 kg, and box length a = 0.1m? What does this tell you about the distribution and degeneracy of translational states? [12 pts] 
 
-## Solution
+<h2>Solution</h2>
 *I didn't know how to do this problem so my solution follows the corresponding section in our textbook. I tried to explicitly do each step including steps skipped in the derivation presented in McQuarrie.*
 
 
@@ -179,11 +182,10 @@ We learned in class that degeneracy increases with available states and with $\m
 
 --- 
 
-# Problem 6
+## **Problem 6**
 A sample of 325mg of neon occupies 2.00dm$^3$ at 20C. Use the perfect gas law to calculate the pressure. [4 pts]
 
-## Solution
-
+<h2>Solution</h2>
 We know that the ideal gas law (perfect gas law) is $PV = nRT$. We are given $V = 2.00$dm$^3 = 2.00 \times 10^{-3}$m$^3$, $T = 20C = 293.15 K$, and a mass which can be converted to n, number of moles using the atomic mass of Neon (20.18 g/mol) giving $n= \frac{0.32}{20.18} = 0.0161$mol
 
 $$
@@ -194,7 +196,7 @@ So our final answer is 19.6kPa
 
 --- 
 
-## Problem 7
+## **Problem 7**
 A sample consisting of 2.00 mol of He is expanded isothermally at 0C from 5.00dm$^3$ to 20.0 dm$^3$
 
 - (a): reversibly  
@@ -203,10 +205,11 @@ A sample consisting of 2.00 mol of He is expanded isothermally at 0C from 5.00dm
 
 For all three processes, calculate q, w, $\Delta$U and $\Delta$H. Assume ideal gas behavior. [12pts]
 
-## Solution
+<h2>Solution</h2>
+
 For an ideal gas at constant temperature, $\Delta U = 0$ and $\Delta H = 0$ for all 3 questions ($\Delta H = \Delta U + \Delta PV$. We already say $\Delta U = 0$ and $PV$ is constant for a fixed $n$ at constant $T$ so $\Delta PT = 0$ )
 
-### a
+#### a
 
 $$w_{\text{reversible}} = - n R T \ln \displaystyle{\frac{V_f}{V_i}}$$
 
@@ -215,7 +218,7 @@ $$w_{\text{reversible}} = - 2.0 \times 8.314 \times 273.15 \ln{\frac{20.0}{5.00}
 $$q_{\text{reversible}} = -w_{\text{reversible}} = 6.29~\text{kJ}$$
 
 
-### b
+#### b
 To solve b, we first have to find the pressure of the final gas.
 
 $$P = \frac{nRT}{V} = \frac{2.0 \times 8.314 \times 273.15}{2.0 \times 10^{-2} m^3} \approx 227 ~\text{kPa}$$
@@ -226,7 +229,7 @@ $$W = -P_{ext}(V_f - V_i) = - 227 (2\times10^{-2} - 5\times10^{-3}) = -3.14 ~\te
 
 $$q = -w = 3.14 ~\text{kJ}$$
 
-### c
+#### c
 External pressure is 0 so the work equation becomes:
 
 $$W = -P_{ext}(V_f - V_i) = - 0 (2\times10^{-2} - 5\times10^{-3}) = -0 ~\text{kJ}$$

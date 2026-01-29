@@ -2,6 +2,30 @@ site_name: Online Notebook
 
 theme:
   name: material
+  palette:
+    - primary: custom
+  features:
+    - navigation.sections
+
+nav:
+  - Home: index.md
+  - Optics:
+      - Overview: Optics/index.md
+      - Lectures:
+          - Lecture 1: Optics/Lectures/Opt_01_20_26.md
+          - Lecture 2: Optics/Lectures/Opt_01_22_26.md
+          - Lecture 3: Optics/Lectures/Opt_01_27_26.md
+      - Homework:
+          - HW 1: Optics/Homework/Optics_HW1.md
+          - HW 2: Optics/Homework/Optics_HW2.md
+  - Statistical Mechanics:
+      - Overview: Statistical_Mechanics/index.md
+      - Lectures:
+          - Lecture 1: Statistical_Mechanics/lectures/Stat_01_20_26.md
+          - Lecture 2: Statistical_Mechanics/lectures/Stat_01_22_26.md
+          - Lecture 3: Statistical_Mechanics/lectures/Stat_01_27_26.md
+      - Homework:
+          - HW1: Statistical_Mechanics/homework/Statistical_Mechanics_HW1.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
@@ -10,3 +34,6 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
