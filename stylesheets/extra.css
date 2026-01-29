@@ -1,0 +1,22 @@
+:root {
+  --md-primary-fg-color: #00412c;
+  --md-accent-fg-color: ##eed321;
+  .md-nav__item .md-nav__link:hover {
+    color: #eed321 !important;
+  }
+
+  .md-nav__link:hover,
+  .md-nav__link:focus {
+    color: #eed321 !important;
+  }
+  /* Normal links in page content */
+  .md-content a {
+    color: #00412c;
+  }
+
+  /* Hover state for links in page content */
+  .md-content a:hover {
+    color: #eed321; /* slightly darker is best UX */
+    text-decoration: underline;
+  }
+}
