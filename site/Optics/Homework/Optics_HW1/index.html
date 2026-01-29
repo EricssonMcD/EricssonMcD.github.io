@@ -1072,75 +1072,91 @@
 <div class="arithmatex">\[
 \vec{\nabla} \times \vec{E}(\vec{r},t) = - \frac{\partial \vec{B}(\vec{r},t)}{\partial t}
 \]</div>
-<p>Taking the Fourier transform:</p>
+<p>Multiplying both sides by <span class="arithmatex">\(e^{-i \omega t}\)</span>:</p>
 <div class="arithmatex">\[
-\int_{-\infty}^{\infty} \vec{\nabla} \times \vec{E}(\vec{r},t) e^{-i \omega t} dt = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt 
+ \vec{\nabla} \times \vec{E}(\vec{r},t) e^{-i \omega t}  = -  \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t}
+\]</div>
+<p>We can begin with the definition of the product rule:</p>
+<div class="arithmatex">\[
+\frac{d}{dt}(fg) = g \frac{f}{t} + f\frac{dg}{dt}
+\]</div>
+<p>This can be rearranged to</p>
+<div class="arithmatex">\[
+-f\frac{dg}{dt} =  g \frac{df}{dt} - \frac{d}{dt}(fg)
+\]</div>
+<p>We can take the <span class="arithmatex">\(\frac{\partial \vec{B}}{\partial t}\)</span> to be <span class="arithmatex">\(-f\frac{dg}{dt}\)</span> and fill in the rest of the rearranged product rule formula to get:</p>
+<div class="arithmatex">\[
+ \vec{\nabla} \times \vec{E}(\vec{r},t) e^{-i \omega t}  = \vec{B}(\vec{r},t) \frac{\partial e^{-i \omega t}}{\partial t} - \frac{\partial e^{-i \omega t \vec{B}(\vec{r},t)}}{\partial t}
+\]</div>
+<p>taking the derivative in the first term on the right side gives us:</p>
+<div class="arithmatex">\[
+ \vec{\nabla} \times \vec{E}(\vec{r},t) e^{-i \omega t}  =-i \omega \vec{B}(\vec{r},t) e^{-i \omega t} - \frac{\partial e^{-i \omega t \vec{B}(\vec{r},t)}}{\partial t}
+\]</div>
+<p>Then we can integrate both sides of the equation:</p>
+<div class="arithmatex">\[
+\int_{-infty}^{infty} \vec{\nabla} \times \vec{E}(\vec{r},t) e^{-i \omega t}  = \int_{-\infty}^{\infty} -i \omega \vec{B}(\vec{r},t) e^{-i \omega t} - \frac{\partial e^{-i \omega t \vec{B}(\vec{r},t)}}{\partial t}dt
 \]</div>
 <p>Bringing the curl outside the integral:</p>
 <div class="arithmatex">\[ 
-\vec{\nabla} \times \int_{-\infty}^{\infty} \vec{E}(\vec{r},t) e^{-i \omega t} dt = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
+\vec{\nabla} \times \int_{-\infty}^{\infty} \vec{E}(\vec{r},t) e^{-i \omega t} dt = - \int_{-\infty}^{\infty} -i \omega \vec{B}(\vec{r},t) e^{-i \omega t} - \frac{\partial e^{-i \omega t \vec{B}(\vec{r},t)}}{\partial t}dt
 \]</div>
 <p>Simplifying the Fourier transform on the left side:</p>
-<div class="arithmatex">\[ \vec{\nabla} \times \tilde{E}(\vec{r},\omega) = - \int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt \]</div>
-<p>Using integration by parts on the right side:</p>
-<div class="arithmatex">\[
-u = e^{-i \omega t} \quad dv = \frac{\partial \vec{B}(\vec{r},t)}{\partial t} dt
-\]</div>
-<div class="arithmatex">\[
-du = -i \omega e^{-i \omega t} dt \quad v = \vec{B}(\vec{r},t)
-\]</div>
-<div class="arithmatex">\[
-\int u \, dv = uv - \int v \, du
-\]</div>
-<div class="arithmatex">\[
-\int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = \left[ \vec{B}(\vec{r},t) e^{-i \omega t} \right]_{-\infty}^{\infty} + i \omega \int_{-\infty}^{\infty} \vec{B}(\vec{r},t) e^{-i \omega t} dt
-\]</div>
-<p>Assuming the special case where <span class="arithmatex">\(\rho = 0\)</span> and <span class="arithmatex">\(\vec{J} = 0\)</span> as we did in class lets us simplify the differential:</p>
-<div class="arithmatex">\[
--\frac{\partial \vec{B}}{\partial t} = \nabla \times \vec{E}
-\]</div>
-<div class="arithmatex">\[
-\int_{-\infty}^{\infty} \frac{\partial \vec{B}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = i \omega \tilde{B}(\vec{r},\omega)
-\]</div>
-<p>Resulting in:</p>
+<div class="arithmatex">\[ \vec{\nabla} \times \tilde{E}(\vec{r},\omega) = - \int_{-\infty}^{\infty} -i \omega \vec{B}(\vec{r},t) e^{-i \omega t} - \frac{\partial e^{-i \omega t \vec{B}(\vec{r},t)}}{\partial t}dt\]</div>
+<p>Now the on the right hand side we can change the sum in the integral to a sum of integrals and simplify the fourier transform. </p>
+<div class="arithmatex">\[ \vec{\nabla} \times \tilde{E}(\vec{r},\omega) = i \omega \int_{-\infty}^{\infty} \vec{B}(\vec{r},t) e^{-i \omega t} - \int_{-\infty}^{\infty} \frac{\partial e^{-i \omega t \vec{B}(\vec{r},t)}}{\partial t}dt\]</div>
+<p>Then the time derivative is linear so we bring it out of the last remaining integral term</p>
+<div class="arithmatex">\[ \vec{\nabla} \times \tilde{E}(\vec{r},\omega) = i \omega \int_{-\infty}^{\infty} \vec{B}(\vec{r},t) e^{-i \omega t} - \frac{\partial}{\partial t}\int_{-\infty}^{\infty} e^{-i \omega t} \vec{B}(\vec{r},t)dt\]</div>
+<p>Then we can simplify the FT.</p>
+<div class="arithmatex">\[ \vec{\nabla} \times \tilde{E}(\vec{r},\omega) = -i \omega \tilde{B}(\vec{r},\nu)  -  \frac{\partial  \tilde{B}(\vec{r},\nu)}{\partial t}dt\]</div>
+<p>We can recognize that this last term is a time derivative of a function in frequency space so that derivative will be 0 resulting in:</p>
 <div class="arithmatex">\[\vec{\nabla} \times \tilde{E}(\vec{r},\omega) = - i \omega \tilde{B}(\vec{r},\omega)\]</div>
 <hr />
 <h3 id="ampere-maxwell-law-in-matter">Ampere-Maxwell Law in matter:</h3>
 <div class="arithmatex">\[
 \vec{\nabla} \times \vec{H}(\vec{r},t) = \vec{J}_{f}(\vec{r},t) + \frac{\partial \vec{D}(\vec{r},t)}{\partial t}
 \]</div>
-<p>Taking the Fourier transform:</p>
+<p>Using a similar technique as above, we can first multiply on both sides by <span class="arithmatex">\(e^{-i \omega t}\)</span> and then take the partial deriavte on the right hand side and expand it with the product rule:</p>
 <div class="arithmatex">\[
-\int_{-\infty}^{\infty} \vec{\nabla} \times \vec{H}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \vec{J}_{f}(\vec{r},t) e^{-i \omega t} dt + \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
+\ e^{-i \omega t} \vec{\nabla} \times \vec{H}(\vec{r},t) = e^{-i \omega t}\vec{J}_{f}(\vec{r},t) + e^{i \omega t} \frac{\partial \vec{D}(\vec{r},t)}{\partial t}
 \]</div>
-<p>Bringing the curl operator outside the integral:</p>
+<p>then we make the substitution:</p>
 <div class="arithmatex">\[
-\vec{\nabla} \times \int_{-\infty}^{\infty} \vec{H}(\vec{r},t) e^{-i \omega t} dt = \int_{-\infty}^{\infty} \vec{J}_{f}(\vec{r},t) e^{-i \omega t} dt + \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
-\]</div>
-<p>Simplifying the Fourier transforms on the left side and the first term on the right side:</p>
-<div class="arithmatex">\[
-\vec{\nabla} \times \tilde{H}(\vec{r},\omega) = \tilde{J}_{f}(\vec{r},\omega) + \int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt
-\]</div>
-<p>Using integration by parts on the last term:</p>
-<div class="arithmatex">\[
-u = e^{-i \omega t} \quad dv = \frac{\partial \vec{D}(\vec{r},t)}{\partial t} dt 
-\]</div>
-<div class="arithmatex">\[ 
-du = -i \omega e^{-i \omega t} dt \quad v = \vec{D}(\vec{r},t)
-\]</div>
-<div class="arithmatex">\[ 
-\int u \, dv = uv - \int v \, du 
+e^{-i \omega t} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} = \frac{\partial e^{-i \omega t}\vec{D}(\vec{r},t)}{\partial t} - \vec{D}(\vec{r},t) \frac{\partial e^{-i \omega t}}{\partial t}
 \]</div>
 <div class="arithmatex">\[
-\int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = \left[ \vec{D}(\vec{r},t) e^{-i \omega t} \right]_{-\infty}^{\infty} + i \omega \int_{-\infty}^{\infty} \vec{D}(\vec{r},t) e^{-i \omega t} dt
+\ e^{-i \omega t} \vec{\nabla} \times \vec{H}(\vec{r},t) = e^{-i \omega t}\vec{J}_{f}(\vec{r},t) + \frac{\partial e^{-i \omega t}\vec{D}(\vec{r},t)}{\partial t} - \vec{D}(\vec{r},t) \frac{\partial e^{-i \omega t}}{\partial t}
 \]</div>
-<p>I have not taken enough physics to know if this is valid but from what I have read in literature it is a standard assumption to say <span class="arithmatex">\(\vec{D}(\vec{r},t)\)</span> goes to 0 and +/- <span class="arithmatex">\(\infty\)</span>. This would cause the extra <span class="arithmatex">\([\vec{D}(\vec{r},t)\exp{[-i \omega t]}]\)</span> term to go away leaving in integration resul:. </p>
+<p>Then we can integrate both sides:</p>
 <div class="arithmatex">\[
-\int_{-\infty}^{\infty} \frac{\partial \vec{D}(\vec{r},t)}{\partial t} e^{-i \omega t} dt = i \omega \tilde{D}(\vec{r},\omega)
+\int_{-\infty}^{\infty} e^{-i \omega t} \vec{\nabla} \times \vec{H}(\vec{r},t) dt = \int_{-\infty}^{\infty} e^{-i \omega t}\vec{J}_{f}(\vec{r},t) + \int_{-\infty}^{\infty} \frac{\partial e^{-i \omega t}\vec{D}(\vec{r},t)}{\partial t} dt - \int_{-\infty}^{\infty} \vec{D}(\vec{r},t) \frac{\partial e^{-i \omega t}}{\partial t}dt
 \]</div>
-<p>Resulting in:</p>
-<div class="arithmatex">\[ 
-\vec{\nabla} \times \tilde{H}(\vec{r},\omega) = \tilde{J}_{f}(\vec{r},\omega) + i \omega \tilde{D}(\vec{r},\omega) 
+<p>On the left we can bring the curl operator outside of the time integral and on the right we can simplify the <span class="arithmatex">\(\vec{J}\)</span> FT.</p>
+<div class="arithmatex">\[
+\vec{\nabla} \times \int_{-\infty}^{\infty} e^{-i \omega t}  \vec{H}(\vec{r},t) dt = \tilde{J}_{f}(\vec{r},\nu) + \int_{-\infty}^{\infty} \frac{\partial e^{-i \omega t}\vec{D}(\vec{r},t)}{\partial t} dt - \int_{-\infty}^{\infty} \vec{D}(\vec{r},t) \frac{\partial e^{-i \omega t}}{\partial t}dt
+\]</div>
+<p>Then we can simplify the FT on the left hand side:</p>
+<div class="arithmatex">\[
+\vec{\nabla} \times \tilde{H}(\vec{r},\nu) = \tilde{J}_{f}(\vec{r},\nu) + \int_{-\infty}^{\infty} \frac{\partial e^{-i \omega t}\vec{D}(\vec{r},t)}{\partial t} dt - \int_{-\infty}^{\infty} \vec{D}(\vec{r},t) \frac{\partial e^{-i \omega t}}{\partial t}dt
+\]</div>
+<p>We can take the derivative in the last term to get </p>
+<div class="arithmatex">\[
+\vec{\nabla} \times \tilde{H}(\vec{r},\nu) = \tilde{J}_{f}(\vec{r},\nu) + \int_{-\infty}^{\infty} \frac{\partial e^{-i \omega t}\vec{D}(\vec{r},t)}{\partial t} dt - \int_{-\infty}^{\infty} -i \omega \vec{D}(\vec{r},t)  e^{-i \omega t}dt
+\]</div>
+<p>which then becomes:</p>
+<div class="arithmatex">\[
+\vec{\nabla} \times \tilde{H}(\vec{r},\nu) = \tilde{J}_{f}(\vec{r},\nu) + \int_{-\infty}^{\infty} \frac{\partial e^{-i \omega t}\vec{D}(\vec{r},t)}{\partial t} dt  + i \omega \vec{D}(\tilde{r},\nu)
+\]</div>
+<p>Then the time derivative is linear so we bring it out of the last remaining integral term</p>
+<div class="arithmatex">\[
+\vec{\nabla} \times \tilde{H}(\vec{r},\nu) = \tilde{J}_{f}(\vec{r},\nu) +\frac{\partial}{\partial t} \int_{-\infty}^{\infty} e^{-i \omega t}\vec{D}(\vec{r},t) dt  + i \omega \vec{D}(\tilde{r},\nu)
+\]</div>
+<p>Finally we can simplify the last FT:</p>
+<div class="arithmatex">\[
+\vec{\nabla} \times \tilde{H}(\vec{r},\nu) = \tilde{J}_{f}(\vec{r},\nu) +\frac{\partial}{\partial t}\vec{D}(\vec{r},\nu)  + i \omega \tilde{D}(\vec{r},\nu)
+\]</div>
+<p>This is another time derivative of a frequency function so it goes to 0 leaving the final result </p>
+<div class="arithmatex">\[
+\vec{\nabla} \times \tilde{H}(\vec{r},\nu)= \tilde{J}_{f}(\vec{r},\nu) ++ i \omega \tilde{D}(\vec{r},\nu)
 \]</div>
 
 

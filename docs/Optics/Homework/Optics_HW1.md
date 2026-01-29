@@ -69,7 +69,7 @@ $$
 We can begin with the definition of the product rule:
 
 $$
-\frac{d}{dt}(fg) = g \frac{f}{t} + f\frac{dg}{dt}
+\frac{d}{dt}(fg) = g \frac{f}{dt} + f\frac{dg}{dt}
 $$
 
 This can be rearranged to
