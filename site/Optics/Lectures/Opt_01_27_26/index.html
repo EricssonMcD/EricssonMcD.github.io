@@ -12,7 +12,7 @@
         <link rel="prev" href="../Opt_01_22_26/">
       
       
-        <link rel="next" href="../../Homework/Optics_HW1/">
+        <link rel="next" href="../Opt_01_29_26/">
       
       
         
@@ -514,13 +514,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#thin-lense" class="md-nav__link">
+  <a href="#thin-lens" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Thin Lense
+        Thin Lens
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Thin Lens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parallel-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parallel Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#point-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Point Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -546,10 +574,49 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#arbitrary-optical-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arbitrary Optical System
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Opt_01_29_26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -1043,13 +1110,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#thin-lense" class="md-nav__link">
+  <a href="#thin-lens" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Thin Lense
+        Thin Lens
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Thin Lens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parallel-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parallel Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#point-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Point Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1075,6 +1170,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#arbitrary-optical-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arbitrary Optical System
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1094,16 +1200,17 @@
 
   <h1>Lecture 3</h1>
 
-<p>Last Time we found the ABCD matrix for a ray traveling through free space with refractive index <span class="arithmatex">\(n_1\)</span>. This was interesting but to develop more complext optical systems we need to find ways to mathematically treat differnt components of these sytems including:</p>
+<p>Last Time we found the ABCD matrix for a ray traveling through free space with refractive index <span class="arithmatex">\(n_1\)</span>. This was interesting but to develop more complex optical systems we need to find ways to mathematically treat different components of these systems including:</p>
 <ol>
 <li>A Free Space</li>
 <li>A flat interface</li>
-<li>A thin lense</li>
+<li>A thin lens</li>
 <li>A Curved Interface</li>
 </ol>
 <hr />
 <h2 id="free-space">Free Space</h2>
-<p>As we leanred in class last time, if we want to find a new vector from an origional after travleing a distance, <span class="arithmatex">\(d\)</span>, across a free space of refractive index <span class="arithmatex">\(n\)</span>, we can use the matrix</p>
+<p><img alt="Free Space" src="../figures/free_space_prop.png" /></p>
+<p>As we learned in class last time, if we want to find a new vector from an original after traveling a distance, <span class="arithmatex">\(d\)</span>, across a free space of refractive index <span class="arithmatex">\(n\)</span>, we can use the matrix</p>
 <div class="arithmatex">\[
 \bar{m} = 
 \begin{pmatrix}
@@ -1127,7 +1234,7 @@ n_1 u_1
 \end{pmatrix}
 \]</div>
 <h2 id="flat-interface">Flat Interface</h2>
-<p>From here, it would be benefial to have a way to represent the interaction of our ray with a flat interface between a region with refractive index <span class="arithmatex">\(n_1\)</span> and <span class="arithmatex">\(n_2\)</span>. Much like how we solved for our ABCD matrix last time, we will set up the equation</p>
+<p>From here, it would be beneficial to have a way to represent the interaction of our ray with a flat interface between a region with refractive index <span class="arithmatex">\(n_1\)</span> and <span class="arithmatex">\(n_2\)</span>. Much like how we solved for our ABCD matrix last time, we will set up the equation</p>
 <div class="arithmatex">\[
 \begin{pmatrix}
 y_2 \\
@@ -1138,17 +1245,17 @@ A y_1 + B n_1 u_1 \\
 C y_1 + D n_1 u_1
 \end{pmatrix}
 \]</div>
-<p>and then find other equations which connect <span class="arithmatex">\(y_2\)</span> and <span class="arithmatex">\(n_2 u_2\)</span> with <span class="arithmatex">\(y_1\)</span> and <span class="arithmatex">\(n_1 u_1\)</span> to find the coefficents. </p>
+<p>and then find other equations which connect <span class="arithmatex">\(y_2\)</span> and <span class="arithmatex">\(n_2 u_2\)</span> with <span class="arithmatex">\(y_1\)</span> and <span class="arithmatex">\(n_1 u_1\)</span> to find the coefficients. </p>
 <p>Going forward to solve this type of problem it is very useful to draw a diagram and look at the problem graphically. </p>
-<p><img alt="Flat Interface" src="../figures/Lec3_Fig1.png" />
-In this graphic we can see that a vector <span class="arithmatex">\(\vec{f}_1\)</span> hits a flat interface and transitions to <span class="arithmatex">\(\vec{f}_2\)</span>. In the blown up graphic, we see that the heigh of <span class="arithmatex">\(y_2\)</span> is equal to the height of <span class="arithmatex">\(y_1\)</span> immeditly to the left and right of the interface giving the equation </p>
+<p><img alt="Flat Interface" src="../figures/flat_interface.png" /></p>
+<p>In this graphic we can see that a vector <span class="arithmatex">\(\vec{f}_1\)</span> hits a flat interface and transitions to <span class="arithmatex">\(\vec{f}_2\)</span>. In the blown up graphic, we see that the height of <span class="arithmatex">\(y_2\)</span> is equal to the height of <span class="arithmatex">\(y_1\)</span> immediately to the left and right of the interface giving the equation </p>
 <div class="arithmatex">\[y_2 = y_1 + 0(n_1u_1)\]</div>
-<p><em>The <span class="arithmatex">\(0(n_1u_1)\)</span> term will make more sense after evaluting the next optical component</em></p>
-<p>We know snells law to be </p>
+<p><em>The <span class="arithmatex">\(0(n_1u_1)\)</span> term will make more sense after evaluating the next optical component</em></p>
+<p>We know Snell's law to be </p>
 <p>$<span class="arithmatex">\(n_1 \sin{\theta_1} = n_2 \sin{\theta_2}\)</span>$
 using our paraxial approximation we know <span class="arithmatex">\(\sin{\theta} = \theta\)</span> and using the y nu terminology <span class="arithmatex">\(\theta_n = u_n\)</span> giving the equation</p>
 <div class="arithmatex">\[n_1 u_1 = 0(y_1) + n_2 u_2\]</div>
-<p>Now we can look at our two equations with the expanded ABCD matrix and try to match coeffiences:</p>
+<p>Now we can look at our two equations with the expanded ABCD matrix and try to match coefficients:</p>
 <div class="arithmatex">\[
 \begin{pmatrix}
 y_2 \\
@@ -1161,7 +1268,7 @@ C y_1 + D n_1 u_1
 \]</div>
 <div class="arithmatex">\[y_2 = y_1 + 0(n_1u_1)\]</div>
 <div class="arithmatex">\[n_1 u_1 = 0(y_1) + n_2 u_2\]</div>
-<p>From this we can see clearly that our coefficents will be <span class="arithmatex">\(A=1\)</span>, <span class="arithmatex">\(B=0\)</span>, <span class="arithmatex">\(C=0\)</span>, <span class="arithmatex">\(D=1\)</span> giving the flat interface matrix:</p>
+<p>From this we can see clearly that our coefficients will be <span class="arithmatex">\(A=1\)</span>, <span class="arithmatex">\(B=0\)</span>, <span class="arithmatex">\(C=0\)</span>, <span class="arithmatex">\(D=1\)</span> giving the flat interface matrix:</p>
 <div class="arithmatex">\[
 \bar{m} = 
 \begin{pmatrix}
@@ -1170,20 +1277,21 @@ C y_1 + D n_1 u_1
 \end{pmatrix}
 = \bar{I}
 \]</div>
-<h2 id="thin-lense">Thin Lense</h2>
-<p>The next optical component we will consider is that of a <em>thin lens</em>. This is an approximation that neglets the thickness of the lens itself and is essentially a plane that affects the incoming ray as if it were an actual lens. </p>
-<p>Like a traditional lense, the thin lens has a focal lenth <span class="arithmatex">\(\mathcal{f}\)</span> which is the same on both sides of the lens. </p>
-<p>When we say focal length we mean that when parallel rays (collimated light) enters the lense in optical space, those rays will all intersect at one point a distance <span class="arithmatex">\(\mathcal{f}\)</span> from the lens in image space. The inverse is also true, a point source in optics space will result in collimated light in image space (<em>see diagrams below</em>).</p>
+<h2 id="thin-lens">Thin Lens</h2>
+<p>The next optical component we will consider is that of a <em>thin lens</em>. This is an approximation that neglects the thickness of the lens itself and is essentially a plane that affects the incoming ray as if it were an actual lens. </p>
+<p>Like a traditional lens, the thin lens has a focal length <span class="arithmatex">\(\mathcal{f}\)</span> which is the same on both sides of the lens. </p>
+<p>When we say focal length we mean that when parallel rays (collimated light) enters the lens in optical space, those rays will all intersect at one point a distance <span class="arithmatex">\(\mathcal{f}\)</span> from the lens in image space. The inverse is also true, a point source in optics space will result in collimated light in image space (<em>see diagrams in respective sections below</em>).</p>
 <p><strong>Parallel Source</strong>
-<img alt="Parallel Source Thin Lens" src="../figures/Lec3_Fig2.png" /></p>
+<img alt="Parallel Source Thin Lens" src="../figures/thin_lens_parallel_source.png" /></p>
 <p><strong>Point Source</strong>
-<img alt="Point Source Thin Lens" src="../figures/Lec3_Fig3.png" /></p>
+<img alt="Point Source Thin Lens" src="../figures/thin_lens_point_source.png" /></p>
 <p>When using the thin lens approximation, we will draw negative and positive lenses in the following way to ensure we know we are making this approximation:</p>
-<p><strong>Insert photos</strong></p>
-<p>To figure out our ABCD matrix, we need both digrams we saw earlier (parallel source and point source). When we derive our ABCD matrix for a positive lens, it will also work for a negative lens. </p>
+<p><img alt="Thin Lens Representation" src="../figures/thin_lenses.png" /></p>
+<p>To figure out our ABCD matrix, we need both the parallel source and point source. When we derive our ABCD matrix for a positive lens, it will also work for a negative lens. </p>
 <p>We will begin with looking at the parallel source.</p>
-<p><strong>Image of parallel source with rays crossing in image space</strong></p>
-<p>Our initial vector <span class="arithmatex">\(\vec{f}_1\)</span> can have an initial heigh with any <span class="arithmatex">\(y_1\)</span> becasue all parallel rays will fross at <span class="arithmatex">\(\mathcal{f}\)</span> in image space. We also know that the incoming light is all parallel which means it interacts orthogonally to the thin lens meaning <span class="arithmatex">\(n_1 u_1 = 0\)</span>. Combining these we see</p>
+<h3 id="parallel-source"><strong>Parallel Source</strong></h3>
+<p><img alt="Parallel Source Thin Lens Math" src="../figures/thin_lens_parallel_source_math.png" /></p>
+<p>Our initial vector <span class="arithmatex">\(\vec{f}_1\)</span> can have an initial height with any <span class="arithmatex">\(y_1\)</span> because all parallel rays will cross at <span class="arithmatex">\(\mathcal{f}\)</span> in image space. We also know that the incoming light is all parallel which means it interacts orthogonally to the thin lens meaning <span class="arithmatex">\(n_1 u_1 = 0\)</span>. Combining these we see</p>
 <div class="arithmatex">\[\vec{f_1} = 
 \begin{pmatrix}
 y_1 \\
@@ -1193,9 +1301,9 @@ n_1 u_1
 y_1 \\
 0
 \end{pmatrix}\]</div>
-<p>Now, choosing an arbitrary <span class="arithmatex">\(\vec{f}_1\)</span> we can draw the right triangle with sides <span class="arithmatex">\(y_1\)</span> and <span class="arithmatex">\(\mathcal{f}\)</span>. If we want to find <span class="arithmatex">\(n_2 u_2\)</span> we can use trigonometry and see that (using the paraxial approximation) <span class="arithmatex">\(\tan{\theta_2} = \frac{y_1}{\mathcal{f}} \approx u_21\)</span> we need this in terms of <span class="arithmatex">\(n_2 u_2\)</span> so we can multiply creatively by <span class="arithmatex">\(1 = \frac{n_2}{n_2}\)</span> to get</p>
+<p>Now, choosing an arbitrary <span class="arithmatex">\(\vec{f}_1\)</span> we can draw the right triangle with sides <span class="arithmatex">\(y_1\)</span> and <span class="arithmatex">\(\mathcal{f}\)</span>. If we want to find <span class="arithmatex">\(n_2 u_2\)</span> we can use trigonometry and see that (using the paraxial approximation) <span class="arithmatex">\(\tan{\theta_2} = \frac{y_1}{\mathcal{f}} \approx u_2\)</span> we need this in terms of <span class="arithmatex">\(n_2 u_2\)</span> so we can multiply creatively by <span class="arithmatex">\(1 = \frac{n_2}{n_2}\)</span> to get</p>
 <div class="arithmatex">\[\frac{y_1}{\mathcal{f}} = \frac{n_2 u_2}{n_2} \rightarrow n_2 u_2 = \frac{n_2}{\mathcal{f}}y_1\]</div>
-<p>now we have 2 equations that we can use to help solve for some of our ABCD coeffiencets:</p>
+<p>now we have 2 equations that we can use to help solve for some of our ABCD coefficients:</p>
 <div class="arithmatex">\[y_2 = y_1\]</div>
 <div class="arithmatex">\[n_2 u_2 = \frac{n_2}{\mathcal{f}}y_1\]</div>
 <div class="arithmatex">\[
@@ -1208,17 +1316,17 @@ A y_1 + B n_1 u_1 \\
 C y_1 + D n_1 u_1
 \end{pmatrix}
 \]</div>
-<p>This lets us see clearly that <span class="arithmatex">\(A=1\)</span> and <span class="arithmatex">\(C= \frac{n_2}{\mathcal{f}}\)</span> but we can not say anything about <span class="arithmatex">\(B\)</span> or <span class="arithmatex">\(D\)</span>. To find these coeffiences, we need the other picture starting from a point source in optics space that creates parallel lines in image space. </p>
-<p><strong>Image described above</strong></p>
-<p>Here we can perform the same treatment seeing that immedialty before and after the interface <span class="arithmatex">\(y_2 = y_1\)</span> and after the lens, <span class="arithmatex">\(n_2 u_2 = 0\)</span>. We can use the same trick we did before to draw a right triangle with the ray in optics space, the height <span class="arithmatex">\(y_1\)</span> and the focal lenght <span class="arithmatex">\(\mathcal{f}\)</span>.</p>
-<p><strong>right triangle image</strong></p>
+<p>This lets us see clearly that <span class="arithmatex">\(A=1\)</span> and <span class="arithmatex">\(C= \frac{n_2}{\mathcal{f}}\)</span> but we can not say anything about <span class="arithmatex">\(B\)</span> or <span class="arithmatex">\(D\)</span>. To find these coefficients, we need the other picture starting from a point source in optics space that creates parallel lines in image space. </p>
+<h3 id="point-source"><strong>Point Source</strong></h3>
+<p><img alt="Point Source Thin Lens Math" src="../figures/thin_lens_point_source_math.png" /></p>
+<p>Here we can perform the same treatment seeing that immediately before and after the interface <span class="arithmatex">\(y_2 = y_1\)</span> and after the lens, <span class="arithmatex">\(n_2 u_2 = 0\)</span>. We can use the same trick we did before to draw a right triangle with the ray in optics space, the height <span class="arithmatex">\(y_1\)</span> and the focal length <span class="arithmatex">\(\mathcal{f}\)</span> (<em>yellow highlight</em>)</p>
 <p>Here we make the same approximation as before and see that </p>
 <div class="arithmatex">\[\tan{\theta_1} = \frac{y_1}{\mathcal{f}} \approx \frac{n_1 u_1}{n_1}\]</div>
-<p>which we can the rearrange to get</p>
+<p>which we can then rearrange to get</p>
 <div class="arithmatex">\[n_1 u_1 = \frac{n_1}{\mathcal{f}} y_1\]</div>
 <p>now we can subtract the right hand side to get </p>
 <div class="arithmatex">\[n_1 u_1 - \frac{n_1}{\mathcal{f}} y_1 = 0\]</div>
-<p>Then, knowing that <span class="arithmatex">\(n_2 u_2 =0\)</span> (parallel rays in image space) We can solve for the remaining coefficents:</p>
+<p>Then, knowing that <span class="arithmatex">\(n_2 u_2 =0\)</span> (parallel rays in image space) We can solve for the remaining coefficients:</p>
 <div class="arithmatex">\[ n_1 u_1 - \frac{n_1}{\mathcal{f}} y_1 = n_2 u_2\]</div>
 <div class="arithmatex">\[y_2 = A y_1 + B n_1 u_1\]</div>
 <div class="arithmatex">\[n_2 u_2 = C y_1 + D n_1 u_1\]</div>
@@ -1233,7 +1341,7 @@ n_2 u_2
 \frac{n_2}{f} (y_1) + 1 (n_1 u_1)
 \end{pmatrix}
 \]</div>
-<p>So the final ABCD matrix for a thin lens with postive or negative focal length is </p>
+<p>So the final ABCD matrix for a thin lens with positive or negative focal length is </p>
 <div class="arithmatex">\[
 \bar{m}= 
 \begin{pmatrix}
@@ -1243,10 +1351,12 @@ n_2 u_2
 \]</div>
 <h2 id="curved-interface">Curved Interface</h2>
 <p><em>This was not derived in class, it may be a homework problem</em></p>
-<p><strong>Curved Lense Image</strong></p>
-<p>Parallel rays entering the curved lense will cross at the focal point <span class="arithmatex">\(\mathcal{f} = \frac{1}{2}R\)</span> with <span class="arithmatex">\(R\)</span> being the radius of curvature of the lens. The sign convention from R follows the direction of the light entering the lens. If it is hitting the convex side, <span class="arithmatex">\(R&gt;0\)</span>. If the light is hitting the concave side of the lens, <span class="arithmatex">\(R&lt;0\)</span>.</p>
-<p><strong>Images for sign convention of R</strong></p>
-<p>The transition matrix for a curved lense is</p>
+<p>Parallel rays entering the curved lens will cross at the focal point <span class="arithmatex">\(\mathcal{f} = \frac{1}{2}R\)</span> with <span class="arithmatex">\(R\)</span> being the radius of curvature of the lens. The sign convention from <span class="arithmatex">\(R\)</span> follows the direction of the light entering the lens. If it is hitting the convex side, <span class="arithmatex">\(R&gt;0\)</span>. If the light is hitting the concave side of the lens, <span class="arithmatex">\(R&lt;0\)</span>.</p>
+<p><strong>Positive R</strong>
+<img alt="Curved Lens Positive R" src="../figures/curved_lens_pos_r.png" /></p>
+<p><strong>Negative R</strong>
+<img alt="Curved Lens Negative R" src="../figures/curved_lens_neg_r.png" /></p>
+<p>The transition matrix for a curved lens is</p>
 <div class="arithmatex">\[
 \bar{m}= 
 \begin{pmatrix}
@@ -1256,13 +1366,13 @@ n_2 u_2
 \]</div>
 <h2 id="thick-lens">Thick Lens</h2>
 <p>When we combine all of our parts, we can make our first optical device: a thick lens. </p>
-<p><strong>Image of thick lens</strong></p>
+<p><img alt="Thick Lens" src="../figures/thick_lens.png" /></p>
 <p>Here <span class="arithmatex">\(\mathcal{F}'\)</span> is called the back focal plane. All quantities in image space will adopt this <span class="arithmatex">\(X'\)</span> notation to distinguish them from optics space. </p>
 <p>To find the ABCD matrix of a thick lens we will follow these steps
 - Create input rays (<span class="arithmatex">\(\vec{f}_1\)</span> parallel to the lens and interacting at an angle)
-- Tranfer rays across <span class="arithmatex">\(R_1\)</span> using the matrix for a curved lens here called <span class="arithmatex">\(\bar{m}_2\)</span> creating <span class="arithmatex">\(\vec{f}_2\)</span>
+- Transfer rays across <span class="arithmatex">\(R_1\)</span> using the matrix for a curved lens here called <span class="arithmatex">\(\bar{m}_2\)</span> creating <span class="arithmatex">\(\vec{f}_2\)</span>
 - Move <span class="arithmatex">\(\vec{f}_1\)</span> through the lens from <span class="arithmatex">\(R_1\)</span> to <span class="arithmatex">\(R_2\)</span> using the free space matrix, <span class="arithmatex">\(\bar{m}_3\)</span>, making <span class="arithmatex">\(\vec{f}_3\)</span>
-- Tranfer rays across <span class="arithmatex">\(R_2\)</span> using the curved lens matrix <span class="arithmatex">\(\bar{m}_4\)</span> which makes <span class="arithmatex">\(\vec{f}_4\)</span></p>
+- Transfer rays across <span class="arithmatex">\(R_2\)</span> using the curved lens matrix <span class="arithmatex">\(\bar{m}_4\)</span> which makes <span class="arithmatex">\(\vec{f}_4\)</span></p>
 <p>The total equation will be</p>
 <div class="arithmatex">\[
 \vec{f}_5 = \bar{m}_4 \bar{m}_3 \bar{m}_2 \vec{f}_1 
@@ -1271,10 +1381,12 @@ n_2 u_2
 <div class="arithmatex">\[
 \bar{m}_T =  \bar{m}_4 \bar{m}_3 \bar{m}_2
 \]</div>
-<p>which can be generalized for j elements to be</p>
+<h2 id="arbitrary-optical-system">Arbitrary Optical System</h2>
+<p><img alt="General Optical System" src="../figures/optical_system_1.png" /></p>
+<p>We can generalize this to any arbitrary optical system with <span class="arithmatex">\(j\)</span> elements which will have the transfer matrix:</p>
 <div class="arithmatex">\[\bar{m}_T =  \bar{m}_{j} \bar{m}_{j-1}... \bar{m}_{2} \bar{m}_{1}\]</div>
 <p><em>How can we find <span class="arithmatex">\(\mathcal{F}\)</span> and <span class="arithmatex">\(\mathcal{F}'\)</span>?</em></p>
-<p><span class="arithmatex">\(\mathcal{F}'\)</span> is defined to be the "back focal plane". The distance between the last optical element and <span class="arithmatex">\(\mathcal{F}'\)</span> is called the "back wokring distance", <span class="arithmatex">\(\mathcal{w}'\)</span></p>
+<p><span class="arithmatex">\(\mathcal{F}'\)</span> is defined to be the "back focal plane". The distance between the last optical element and <span class="arithmatex">\(\mathcal{F}'\)</span> is called the "back working distance", <span class="arithmatex">\(\mathcal{w}'\)</span></p>
 
 
 
