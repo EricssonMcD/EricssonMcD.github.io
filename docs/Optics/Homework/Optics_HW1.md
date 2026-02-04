@@ -129,7 +129,7 @@ $$
 \vec{\nabla} \times \vec{H}(\vec{r},t) = \vec{J}_{f}(\vec{r},t) + \frac{\partial \vec{D}(\vec{r},t)}{\partial t}
 $$
 
-Using a similar technique as above, we can first multiply on both sides by $e^{-i \omega t}$ and then take the partial deriavte on the right hand side and expand it with the product rule:
+Using a similar technique as above, we can first multiply on both sides by $e^{-i \omega t}$ and then take the partial derivate on the right hand side and expand it with the product rule:
 
 $$
 \ e^{-i \omega t} \vec{\nabla} \times \vec{H}(\vec{r},t) = e^{-i \omega t}\vec{J}_{f}(\vec{r},t) + e^{i \omega t} \frac{\partial \vec{D}(\vec{r},t)}{\partial t}

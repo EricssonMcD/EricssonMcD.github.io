@@ -6,6 +6,7 @@ theme:
     - primary: custom
   features:
     - navigation.sections
+    - navigation.footer
 
 nav:
   - Home: index.md
@@ -16,6 +17,7 @@ nav:
           - Lecture 2: Optics/Lectures/Opt_01_22_26.md
           - Lecture 3: Optics/Lectures/Opt_01_27_26.md
           - Lecture 4: Optics/Lectures/Opt_01_29_26.md
+          - Lecture 5: Optics/Lectures/Opt_02_03_26.md
       - Homework:
           - HW 1: Optics/Homework/Optics_HW1.md
           - HW 2: Optics/Homework/Optics_HW2.md
@@ -25,12 +27,26 @@ nav:
           - Lecture 1: Statistical_Mechanics/lectures/Stat_01_20_26.md
           - Lecture 2: Statistical_Mechanics/lectures/Stat_01_22_26.md
           - Lecture 3: Statistical_Mechanics/lectures/Stat_01_27_26.md
+          - Lecture 4: Statistical_Mechanics/lectures/Stat_01_29_26.md
       - Homework:
           - HW1: Statistical_Mechanics/homework/Statistical_Mechanics_HW1.md
+          - HW2: Statistical_Mechanics/homework/Statistical_Mechanics_HW2.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - admonition
+
 
 extra_javascript:
   - javascripts/mathjax.js

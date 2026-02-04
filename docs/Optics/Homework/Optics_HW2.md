@@ -29,7 +29,7 @@ $$
 \nabla(\nabla \cdot \tilde{E}) - \nabla^2 \tilde{E} = \nabla \times [-i \omega \tilde{B}]
 $$
 
-Using the same assumptions we made in class $\rho = 0$  and $\vec{J} = 0$ allows us set  $\nabla \cdot \tilde{E} = 0$  We can then see that the diivergence of 0 is 0 making the entire first term vanish leaving 
+Using the same assumptions we made in class $\rho = 0$  and $\vec{J} = 0$ allows us set  $\nabla \cdot \tilde{E} = 0$  We can then see that the divergence of 0 is 0 making the entire first term vanish leaving 
 
 $$
 -\nabla^2 \tilde{E} = \nabla \times [-i \omega \tilde{B}]
