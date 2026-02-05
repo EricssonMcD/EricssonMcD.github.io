@@ -11,8 +11,10 @@ This course is based on *Statistical Mechanics* by Donald A. McQuarrie.
 - [Lecture 2](lectures/Stat_01_22_26.md)
 - [Lecture 3](lectures/Stat_01_27_26.md)
 - [Lecture 4](lectures/Stat_01_29_26.md)
+- [Lecture 5](Lectures/Stat_02_03_26.md)
 - 
 ## Homework Assignments
 
 - [HW1](homework/Statistical_Mechanics_HW1.md)
+- [HW2](homework/Statistical_Mechanics_HW2.md)
 

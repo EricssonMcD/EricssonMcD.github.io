@@ -1,6 +1,6 @@
 :root {
   --md-primary-fg-color: #00412c;
-  --md-accent-fg-color: ##eed321;
+  --md-accent-fg-color: #eed321;
   .md-nav__item .md-nav__link:hover {
     color: #eed321 !important;
   }
