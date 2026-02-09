@@ -11,8 +11,9 @@ This weeks lab is very simple to perform but the data analysis process can be ve
 
 The input procedure is the same for each of the different spreadsheet programs but the graph making procedure is not. The best way to input the data for this experiment is to have 3 columns
 
-| Time (s) | Liquid Temperature (C) | Solid Temperature |
-| 0 | 85 | |
+| Time (s) | Liquid Temperature (C) | Solid Temperature (C) |
+| --- | --- | --- |
+| 0 | 85 | ---- |
 
 Begin inputting data into the "Liquid Temperature" column. When temperature readings change $< 0.5$ degrees C between measurements, start inputting data into the "Solid Temperature" column. This means that the "solid temperature" column will be empty (*not filled with 0's*) for the majority of readings and the "liquid temperature" column will be empty for the last few. This setup will help later on when making your graphs.(**See Input Below**)
 
@@ -91,7 +92,7 @@ This process is different between excel on the web and the desktop app. I am mos
     Click away from your data into a blank cell.  
 
     In the ribbon, select "Insert" and choose the scatter plot option (markers only, no connecting line).  
-    
+
     An empty chart will appear.
 
     ![Create Empty Chart](Lab2_Content/Create_Blank_chart_EO.mov)

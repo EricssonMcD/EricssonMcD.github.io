@@ -1197,10 +1197,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-u-fx-on-0l" class="md-nav__link">
+  <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example: \(-u'' = f(x)\) on \([0,L]\)
+        Example
       
     </span>
   </a>
@@ -1357,22 +1357,23 @@ x = M^{-1} b
 <li>The limits of integration are part of the operator</li>
 <li>Changing limits changes the operator</li>
 </ul>
-<p>To apply <span class="arithmatex">\(\hat D^{-1}\)</span>, one must know:
-- The kernel <span class="arithmatex">\(D^{-1}(x,x')\)</span>
-- The limits of integration</p>
+<p>To apply <span class="arithmatex">\(\hat D^{-1}\)</span>, one must know:</p>
+<ul>
+<li>The kernel <span class="arithmatex">\(D^{-1}(x,x')\)</span></li>
+<li>The limits of integration</li>
+</ul>
 <hr />
 <h2 id="constructing-greens-functions">Constructing Green’s Functions</h2>
 <h3 id="method-1-direct-construction">Method 1: Direct Construction</h3>
-<p>Solve</p>
-<div class="arithmatex">\[
-\hat L G(x,x') = \delta(x-x')
-\]</div>
-<p>by:
-- Solving separately for <span class="arithmatex">\(x&lt;x'\)</span> and <span class="arithmatex">\(x&gt;x'\)</span>
-- Matching solutions at <span class="arithmatex">\(x=x'\)</span>
-- Enforcing:
-  - Continuity of <span class="arithmatex">\(G\)</span>
-  - A jump condition on <span class="arithmatex">\(G'\)</span> from integrating over the delta function</p>
+<p>Solve <span class="arithmatex">\(\hat L G(x,x') = \delta(x-x')\)</span> by:</p>
+<ul>
+<li>Solving separately for <span class="arithmatex">\(x&lt;x'\)</span> and <span class="arithmatex">\(x&gt;x'\)</span></li>
+<li>Matching solutions at <span class="arithmatex">\(x=x'\)</span> while Enforcing:<ul>
+<li>Continuity of <span class="arithmatex">\(G\)</span></li>
+<li>A jump condition on <span class="arithmatex">\(G'\)</span> from integrating over the delta function</li>
+</ul>
+</li>
+</ul>
 <hr />
 <h3 id="method-2-eigenfunction-expansion">Method 2: Eigenfunction Expansion</h3>
 <p>Consider the problem</p>
@@ -1422,27 +1423,26 @@ G(x,x') = \frac{1}{2}|x-x'|
 = f(x)
 \]</div>
 <p>Take</p>
-<div class="arithmatex">\[
-G(x,x') =
+<div class="arithmatex">\[ G(x,x') =
 \begin{cases}
 A\,u_1(x)u_2(x') &amp; x&lt;x' \\
 A\,u_2(x)u_1(x') &amp; x&gt;x'
-\end{cases}
-\]</div>
-<p>where:
-- <span class="arithmatex">\(u_1, u_2\)</span> satisfy <span class="arithmatex">\(\hat L u = 0\)</span>
-- Both satisfy the boundary conditions</p>
+\end{cases}\]</div>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(u_1, u_2\)</span> satisfy <span class="arithmatex">\(\hat L u = 0\)</span></li>
+<li>Both satisfy the boundary conditions</li>
+</ul>
 <p>The constant</p>
 <div class="arithmatex">\[
 A = \frac{1}{p(x')\,[u_1'(x')u_2(x') - u_1(x')u_2'(x')]}
 \]</div>
 <hr />
-<h3 id="example-u-fx-on-0l">Example: <span class="arithmatex">\(-u'' = f(x)\)</span> on <span class="arithmatex">\([0,L]\)</span></h3>
+<h3 id="example_1">Example</h3>
+<p>Consider <span class="arithmatex">\(-u'' = f(x)\)</span> on <span class="arithmatex">\([0,L]\)</span></p>
 <p>Here <span class="arithmatex">\(p=1\)</span>, <span class="arithmatex">\(q=0\)</span>.</p>
-<p>Choose:
-$$
-u_1(x) = x, \qquad u_2(x) = L-x
-$$</p>
+<p>Choose:</p>
+<div class="arithmatex">\[u_1(x) = x, \qquad u_2(x) = L-x\]</div>
 <p>Final Green’s function:</p>
 <div class="arithmatex">\[
 G(x,x') =
@@ -1464,14 +1464,18 @@ G(\mathbf r_1, \mathbf r_2)
 \, g_\ell(r_1,r_2)\,
 P_\ell(\cos\lambda)
 \]</div>
-<p>where:
-- <span class="arithmatex">\(\lambda\)</span> is the angle between <span class="arithmatex">\(\mathbf r_1\)</span> and <span class="arithmatex">\(\mathbf r_2\)</span>
-- <span class="arithmatex">\(P_\ell\)</span> are Legendre polynomials</p>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(\lambda\)</span> is the angle between <span class="arithmatex">\(\mathbf r_1\)</span> and <span class="arithmatex">\(\mathbf r_2\)</span></li>
+<li><span class="arithmatex">\(P_\ell\)</span> are Legendre polynomials</li>
+</ul>
 <p>Radial functions:</p>
 <div class="arithmatex">\[g_\ell(r_1,r_2)=-\frac{1}{2\ell+1}\frac{r_&lt;^\ell}{r_&gt;^{\ell+1}}\]</div>
-<p>with:
-- <span class="arithmatex">\(r_&lt; =\)</span> smaller of <span class="arithmatex">\(r_1,r_2\)</span>
-- <span class="arithmatex">\(r_&gt; =\)</span> larger of <span class="arithmatex">\(r_1,r_2\)</span></p>
+<p>with:</p>
+<ul>
+<li><span class="arithmatex">\(r_&lt; =\)</span> smaller of <span class="arithmatex">\(r_1,r_2\)</span></li>
+<li><span class="arithmatex">\(r_&gt; =\)</span> larger of <span class="arithmatex">\(r_1,r_2\)</span></li>
+</ul>
 <p>This is the <strong>spherical Green’s function</strong>, useful for problems in <span class="arithmatex">\((r,\theta,\phi)\)</span>.</p>
 
 
