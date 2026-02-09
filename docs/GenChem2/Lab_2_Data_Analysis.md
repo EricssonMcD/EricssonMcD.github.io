@@ -1,5 +1,8 @@
 ---
 title: "Freezing Point Depression Analysis"
+hide: 
+    - toc
+    - navigation
 ---
 
 # Lab 2 Data Analysis
