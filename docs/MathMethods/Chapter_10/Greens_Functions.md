@@ -147,6 +147,7 @@ $$
 - Changing limits changes the operator
 
 To apply $\hat D^{-1}$, one must know:
+
 - The kernel $D^{-1}(x,x')$
 - The limits of integration
 
@@ -156,18 +157,12 @@ To apply $\hat D^{-1}$, one must know:
 
 ### Method 1: Direct Construction
 
-Solve
+Solve $\hat L G(x,x') = \delta(x-x')$ by:
 
-$$
-\hat L G(x,x') = \delta(x-x')
-$$
-
-by:
 - Solving separately for $x<x'$ and $x>x'$
-- Matching solutions at $x=x'$
-- Enforcing:
-  - Continuity of $G$
-  - A jump condition on $G'$ from integrating over the delta function
+- Matching solutions at $x=x'$ while Enforcing:
+    - Continuity of $G$
+    - A jump condition on $G'$ from integrating over the delta function
 
 ---
 
@@ -241,15 +236,14 @@ $$
 
 Take
 
-$$
-G(x,x') =
+$$ G(x,x') =
 \begin{cases}
 A\,u_1(x)u_2(x') & x<x' \\
 A\,u_2(x)u_1(x') & x>x'
-\end{cases}
-$$
+\end{cases}$$
 
 where:
+
 - $u_1, u_2$ satisfy $\hat L u = 0$
 - Both satisfy the boundary conditions
 
@@ -261,14 +255,15 @@ $$
 
 ---
 
-### Example: $-u'' = f(x)$ on $[0,L]$
+### Example
+
+Consider $-u'' = f(x)$ on $[0,L]$
 
 Here $p=1$, $q=0$.
 
 Choose:
-$$
-u_1(x) = x, \qquad u_2(x) = L-x
-$$
+
+$$u_1(x) = x, \qquad u_2(x) = L-x$$
 
 Final Green’s function:
 
@@ -299,6 +294,7 @@ P_\ell(\cos\lambda)
 $$
 
 where:
+
 - $\lambda$ is the angle between $\mathbf r_1$ and $\mathbf r_2$
 - $P_\ell$ are Legendre polynomials
 
@@ -307,6 +303,7 @@ Radial functions:
 $$g_\ell(r_1,r_2)=-\frac{1}{2\ell+1}\frac{r_<^\ell}{r_>^{\ell+1}}$$
 
 with:
+
 - $r_< =$ smaller of $r_1,r_2$
 - $r_> =$ larger of $r_1,r_2$
 
