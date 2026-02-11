@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#other-ensembles-and-fluctuations" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -487,6 +492,34 @@
     
   
     Lecture 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Optics/Lectures/Opt_02_05_26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lecture 6
   
 
     
@@ -1042,6 +1075,66 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#grand-canonical-ensemble" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grand Canonical Ensemble
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grand Canonical Ensemble">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constrained-maximization-omega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constrained Maximization \(\Omega\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-ensembles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other Ensembles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fluctuations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluctuations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1058,9 +1151,158 @@
 
 
 
-  <h1>Lecture 6</h1>
-
-
+<h1 id="other-ensembles-and-fluctuations">Other Ensembles and Fluctuations</h1>
+<p>We will derive one more ensemble explicitly and the others will just be presented with the derivations skipped. To derive these other ensembles, you follow the same procedure of maximizes the multiplicity and moving from there. </p>
+<h2 id="grand-canonical-ensemble">Grand Canonical Ensemble</h2>
+<p>Similar setup as the canonical ensemble but now the barriers are permeable and head conducing (n is not fixed in a specific system). The ensemble is described by: <span class="arithmatex">\(V_{total} = V \eta\)</span>, <span class="arithmatex">\(N_{total}\)</span>, <span class="arithmatex">\(E_{total}\)</span></p>
+<p>Now each system must have a specified state and number of molecules. </p>
+<p>To save some room we will use the notation <span class="arithmatex">\(\sum_{N,j} = \sum_N \sum_j\)</span> with J being the state and n being the number of particles in a system. </p>
+<p>Example: Occupation Numbers</p>
+<div class="arithmatex">\[\set{n_{N, j}}\]</div>
+<div class="arithmatex">\[
+\{ n_{i j} \} =
+\begin{pmatrix}
+n_{11} &amp; n_{12} &amp; n_{13} &amp; \cdots &amp; n_{1j} \\
+n_{21} &amp; n_{22} &amp; n_{23} &amp; \cdots &amp; n_{2j} \\
+n_{31} &amp; n_{32} &amp; n_{33} &amp; \cdots &amp; n_{3j} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+n_{N1} &amp; n_{N2} &amp; n_{N3} &amp; \cdots &amp; n_{Nj}
+\end{pmatrix}
+\]</div>
+<p>Multiplicity <span class="arithmatex">\(\Omega\)</span></p>
+<div class="arithmatex">\[
+\Omega = \frac{\sum_{N,j}(n_{N,j})!}{\prod_{N,j}(n_{N,J})!}
+\]</div>
+<p>We can maximize this under the constraints:</p>
+<div class="arithmatex">\[
+\sum_{N,j}(n_{N,j}) = \eta
+\]</div>
+<div class="arithmatex">\[
+\sum_{N,j}(n_{N,j} E_{N,j}) = E_{total}
+\]</div>
+<div class="arithmatex">\[
+\sum_{N,j}(n_{N,j} N)= N_{total}
+\]</div>
+<p>These constraints have the lagrange multipliers <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span>, <span class="arithmatex">\(\gamma\)</span>. N is the number of particles in a particular system</p>
+<h3 id="constrained-maximization-omega">Constrained Maximization <span class="arithmatex">\(\Omega\)</span></h3>
+<div class="arithmatex">\[
+\frac{d}{d n_{N,k}} \left[ \ln(\Omega) - \alpha \sum_{N,k} (n_{N,k}) - \beta \sum_{N,k}(n_{N,k} E_{N,k}) - \gamma \sum_{N,k}(n_{N,k} N)\right] = 0
+\]</div>
+<p>Using Stirlings approximation this becomes</p>
+<div class="arithmatex">\[
+\frac{d}{dn_{N,k}} \left[\sum_{N,k}(n_{N,k}) \ln(\sum_{N,k}(n_{N,k})) - \sum_{N,k} n_{N,k} \ln(n_{N,k}) \right] - \alpha \sum_{N,k}(n_{N,k}) - \beta \sum_{N,k} (n_{N,k} E_{N,k}) - \gamma \sum_{N,k}(n_{N,k}N) = 0
+\]</div>
+<p>We can take the derivative to get </p>
+<div class="arithmatex">\[
+\ln(\sum_{N,k}(n_{N,k})) + \frac{\sum_{N,k}(n_{N,k})}{\sum_{N,k}(n_{N,k})} - [\ln(n^*_{N,k}) + \frac{n^*_{N,k}}{n^*_{N,k}}] - \alpha - \beta E_{N,k} - \gamma N = 0
+\]</div>
+<p>Recognizing <span class="arithmatex">\(\sum_{N,k}(n_{N,k})=\eta\)</span> gives</p>
+<div class="arithmatex">\[
+\ln(\eta) - \ln(n^*_{N,k}) - \alpha - \beta E_{N,k} - \gamma N = 0
+\]</div>
+<p>From here we can solve for <span class="arithmatex">\(n^*_{N,k}\)</span> recognzing that <span class="arithmatex">\(j=1,2,3,...\)</span> and <span class="arithmatex">\(N=0,1,2,3,...\)</span></p>
+<div class="arithmatex">\[
+n^*_{N,k} = \eta e^{-\alpha}e^{-\beta E_{N,k}}e^{-\gamma N}
+\]</div>
+<p>We have the constraint <span class="arithmatex">\(\sum_{N,k}(n^*_{N,k}) = \eta\)</span> so we can get</p>
+<div class="arithmatex">\[
+e^{\alpha} = \sum_{N,k}(e^{-\beta E_{N,k}} e^{-\gamma N} \longrightarrow = \Xi)
+\]</div>
+<p>Where <span class="arithmatex">\(\Xi\)</span> is the "Grand canonical ensemble" (sometimes <span class="arithmatex">\(\mathcal{Z}\)</span>).</p>
+<p>As before, from here we can calculate mechanical properties by finding the probability</p>
+<div class="arithmatex">\[
+P_{N,j} = \frac{n^*_{N,j}}{\eta} \longrightarrow \frac{e^{-beta E_{N,j}}e^{-\gamma N}}{\Xi}
+\]</div>
+<p>To use <span class="arithmatex">\(P_{N,j}\)</span> we need to know <span class="arithmatex">\(\beta\)</span> and <span class="arithmatex">\(\gamma\)</span>.</p>
+<p>We start figuring these out the same we se found them for the canonical ensemble (<span class="arithmatex">\(\bar{E} = \sum_{N,j}(E_{N,j}P_{N,j}\)</span>)):</p>
+<div class="arithmatex">\[
+d \bar{E} = \sum_{N,j} \left[ P_{N,j} dE_{N,j} + E_{N,j} dP_{N,j}  \right]
+\]</div>
+<div class="arithmatex">\[
+d \bar{E} = \sum_{N,j} \left[P_{N,j}\left(-p_{N,j} dV\right)- \frac{1}{\beta} \left(\ln(\Xi) + \ln(p_{N,j}) + \gamma N \right) dP_{N,j} \right]
+\]</div>
+<div class="arithmatex">\[
+d \bar{E} = -\sum_{N,j} \left[P_{N,j}p_{N,j}\right] - \frac{1}{\beta} \left[ \sum_{N,j}\left( \ln(p_{N,j}\right)dp_{N,j}) + \gamma \sum_{N,j} N dp_{N,j} \right]
+\]</div>
+<p>We now start trying to get this into a more recognizable form:</p>
+<div class="arithmatex">\[
+d \bar{E} +\bar{p}_{N,j} + \frac{\gamma}{\beta} d\bar{n} = -\frac{1}{\beta} d\left[ \sum_{N,j}P_{N,j} \ln(P_{N,j}) \right]
+\]</div>
+<p>The differential on the right is <span class="arithmatex">\(dS/k_b\)</span> so we can rewrite the equation as:</p>
+<div class="arithmatex">\[
+d \bar{E} +\bar{p}_{N,j} + \frac{\gamma}{\beta} d\bar{n} = \frac{dS}{\beta k_b}
+\]</div>
+<p>From classical thermodynamics we can use</p>
+<div class="arithmatex">\[
+TdS = dE + pdV - \mu dN
+\]</div>
+<p>from which we can see a relationship between <span class="arithmatex">\(\mu\)</span> and <span class="arithmatex">\(-\gamma/\beta\)</span>. We know <span class="arithmatex">\(\beta\)</span> from last time so we can find <span class="arithmatex">\(\gamma\)</span>.</p>
+<div class="arithmatex">\[
+\beta = \frac{1}{kT} \rightarrow -\gamma = \frac{\mu}{kT}
+\]</div>
+<div class="arithmatex">\[
+\Xi(V,T,\mu) = \sum_{N,j}(e^{-E_{N,j}(V) / kT}e^{\mu N / kT}) \longrightarrow \Xi = \sum_N (Q(N,V,T)e^{\mu N / kt})
+\]</div>
+<p>From here we can compute mechanical properties. </p>
+<p>.......</p>
+<hr />
+<h2 id="other-ensembles">Other Ensembles</h2>
+<table>
+<thead>
+<tr>
+<th>Ensemble</th>
+<th>Note</th>
+<th>Partition Function Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Micro-canonical Ensemble</td>
+<td>Constant N, V, E</td>
+<td><span class="arithmatex">\(\Omega\)</span></td>
+</tr>
+<tr>
+<td>Isothermal-isobaric Ensemble</td>
+<td>Constant N, T, P (fluctuating volume)</td>
+<td><span class="arithmatex">\(\Delta\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="fluctuations">Fluctuations</h2>
+<p>Up to this point, we have been calculating average values of mechanical properties and saying these relate to the properties themselves. We now want to see how closely this approximation holds. </p>
+<p><strong>Energy Fluctuation in the Canonical Ensemble</strong></p>
+<p><span class="arithmatex">\(\sigma = E - \bar{E}\)</span> (on one side of the distribution)</p>
+<div class="arithmatex">\[
+\sigma_E = \bar{(E - \bar{E})^2}^{1/2}
+\]</div>
+<div class="arithmatex">\[
+\sigma_E^2 = \bar{(E - \bar{E})^2} \Rrightarrow \bar{[E^2 - 2E\bar{E}+\bar{E}^2]} = \bar{E}^2 - [\bar{E}]^2
+\]</div>
+<div class="arithmatex">\[
+\sum_j P_j [E^2 - 2E\bar{E}+\bar{E}^2] \rightarrow \boxed{\bar{E}^2 - [\bar{E}]^2 = \sigma_E^2}
+\]</div>
+<p>Recall from canonical ensebmle that <span class="arithmatex">\(\bar{E} = \sum_j E_j P_j\)</span> giving</p>
+<div class="arithmatex">\[
+\bar{E} = \frac{\sum_j (E_j e^{-E_j / kT})}{\sum_j (e^{-E_j / kT})} \rightarrow \frac{\sum_j (E_j e^{-E_j / kT})}{Q}
+\]</div>
+<div class="arithmatex">\[
+\left( \frac{d\bar{E}}{d T} \right)_{N,V} = \frac{d}{dT}\left[ \frac{\sum_j (E_j e^{-E_j / kT})}{Q} \right]
+\]</div>
+<p>using the quotient rule we can arrive at </p>
+<div class="arithmatex">\[
+\left( \frac{d\bar{E}}{d T} \right)_{N,V} = \frac{\frac{d}{dT}(\sum_j (E_j e^{-E_j / kT})Q) - (\frac{dQ}{dT})_{N,V} \sum_j (E_j e^{-E_j / kt})}{Q^2}
+\]</div>
+<div class="arithmatex">\[
+\left( \frac{d\bar{E}}{d T} \right)_{N,V} = \frac{\frac{d}{dT}(\sum_j (E_j e^{-E_j / kT})Q)}{Q} - \frac{(\frac{dQ}{dT})_{N,V} \sum_j (E_j e^{-E_j / kt})}{Q^2}
+\]</div>
+<p>We can pull out <span class="arithmatex">\(1/kT^2\)</span> and recognize the first term as <span class="arithmatex">\(\bar{E^2}\)</span> and the second term as <span class="arithmatex">\([\bar{E}]^2\)</span></p>
+<div class="arithmatex">\[
+kT^2 \left( \frac{d\bar{E}}{d T} \right)_{N,V} = \bar{E}^2 - [\bar{E}]^2 
+\]</div>
+<p>Our internal energy is U so we can use <span class="arithmatex">\(\frac{dU}{dT} = C_v\)</span> to get</p>
+<div class="arithmatex">\[
+kT^2 C_v = \bar{E}^2 - [\bar{E}]^2 
+\]</div>
 
 
 
